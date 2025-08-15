@@ -91,7 +91,7 @@ export default function Competitions() {
         
         <div className="text-center mt-12">
           <p className="text-gray-600 italic">
-            &ldquo;Excellence in competitive programming and machine learning challenges&rdquo;
+            Excellence in competitive programming and machine learning challenges;
           </p>
         </div>
       </div>
