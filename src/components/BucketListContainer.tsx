@@ -129,7 +129,7 @@ export default function BucketListContainer() {
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="space-y-6">
-            {filteredItems.map((item, index) => (
+            {filteredItems.map((item) => (
               <div
                 key={item.id}
                 className={`group relative overflow-hidden rounded-2xl shadow-lg border-4 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 ${

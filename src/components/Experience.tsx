@@ -56,9 +56,9 @@ export default function Experience() {
         <>Developed a pip-installable, reusable Python wheel package for seamless integration with <strong>Triton Inference Server</strong>, supporting high-performance model inference by handling both <strong>HTTP</strong> and <strong>GRPC</strong> requests in <strong>synchronous</strong> and <strong>asynchronous</strong> modes, with built-in logging, error handling, and configuration flexibility.</>,
         <>Designed, deployed high-performance APIs <strong>Request-Response Store</strong> using <strong>FastAPI</strong>, featuring <strong>client authentication</strong>, <strong>rate limiting</strong> and <strong>low 5ms latency</strong>. Orchestrated storage of request-response in <strong>EdgeDB</strong>, synchronized to <strong>Snowflake</strong> based on team-defined frequencies, and leveraged by 10+ DS services.</>,
         <>Designed and implemented a cloud-based workflow for end-to-end processing of customer interactions data. The workflow encompasses data ingestion from Snowflake, audio download, transcription generation, information extraction, and automated customer summary generation. This system is orchestrated through <strong>Airflow</strong> and leverages Google Cloud Functions, Cloud Storage, <strong>Kserve InferenceService</strong>, <strong>Triton</strong>, <strong>MongoDB</strong> and <strong>EdgeDB</strong>.</>,
-        <>Experimenting with deploying <strong>Doris</strong>, <strong>StarRocks</strong>, and associated open-source tools on <strong>GKE</strong> to construct a scalable and high-performance data platform, incorporating <strong>S3</strong>-compatible object storage via <strong>MINIO/GCS</strong>, implementing access control and data retention policies, and ensuring effective <strong>Kubernetes</strong> cluster monitoring and alerting through <strong>Grafana</strong>'s dashboards utilizing <strong>Prometheus</strong> as a primary time-series data source.</>,
+        <>Experimenting with deploying <strong>Doris</strong>, <strong>StarRocks</strong>, and associated open-source tools on <strong>GKE</strong> to construct a scalable and high-performance data platform, incorporating <strong>S3</strong>-compatible object storage via <strong>MINIO/GCS</strong>, implementing access control and data retention policies, and ensuring effective <strong>Kubernetes</strong> cluster monitoring and alerting through <strong>Grafana&apos;s</strong> dashboards utilizing <strong>Prometheus</strong> as a primary time-series data source.</>,
         <>Experimented <a href="https://drive.google.com/file/d/19KvVtSsnsxLBpRJoE9-SFJGd9gzmTkkN/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="font-semibold text-blue-600 hover:text-blue-800 underline">Minio and Milvus</a> integration to extract audio embeddings from Minio, enabling efficient search for similar content, Redis for metadata storage.</>,
-        "Commended and highly appreciated by the COO and VP (DS and BI) for exemplary performance and remarkable contributions."
+        "        &ldquo;Commended and highly appreciated by the COO and VP (DS and BI) for exemplary performance and remarkable contributions.&rdquo;"
       ],
       technologies: ["GCP", "GKE", "Kserve", "Triton Inference Server", "PostgreSQL", "Airflow", "VertexAI", "EdgeDB", "FastAPI", "Feast", "Redis", "BigQuery", "Cloud Build", "Pub/Sub", "Snowflake", "MongoDB", "Doris", "StarRocks", "MINIO", "Milvus", "Grafana", "Prometheus"],
       blogs: [
@@ -243,7 +243,7 @@ export default function Experience() {
                         Blogs Written & Contributed
                       </h4>
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                        {exp.blogs.map((blog: any, idx: number) => (
+                        {exp.blogs.map((blog: { url: string; title: string }, idx: number) => (
                           <a
                             key={idx}
                             href={blog.url}
