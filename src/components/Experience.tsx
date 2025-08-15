@@ -28,7 +28,7 @@ export default function Experience() {
       company: "HALEON",
       position: "Machine Learning Engineer (MLOps)",
       duration: "April 2024 - Present",
-      location: "Banglore",
+      location: "Bengaluru, India",
       description: <>Productionizing Data Science Services, Infrastructure, and Pipelines on <strong>Azure</strong> and <strong>Databricks</strong> for scalable and reliable deployment.</>,
       achievements: [
         <><span className="font-bold text-blue-600">Asset Vision</span>: Designed, implemented a robust CI/CD pipeline with <strong>GitHub Actions</strong> to build and publish Docker images to GitHub Container Registry (<strong>GHCR</strong>) and Azure Container Registry (<strong>ACR</strong>), enabling automated deployment to <strong>Azure Web App</strong> and microservices on <strong>Kubernetes</strong> cluster for scalable, secure and reliable application management across environments. Applied same approach to streamline deployments in other <strong>RAG</strong> based project.</>,

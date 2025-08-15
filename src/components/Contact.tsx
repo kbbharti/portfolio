@@ -7,7 +7,7 @@ export default function Contact() {
     
     const body = encodeURIComponent(`Hi Rajesh 👋,
 
-I hope this message finds you well 🌟. I recently came across your work and was truly impressed by your expertise in Machine Learning 🤖, scalable infrastructure ⚙️, and innovative problem-solving 💡.  
+I hope this message finds you well. I recently came across your work and was truly impressed by your expertise in Machine Learning 🤖, scalable infrastructure ⚙️, and innovative problem-solving 💡.  
 
 I’d love to connect with you regarding ${subject || 'a potential collaboration / opportunity'} and explore how we might work together to create impactful, future-ready solutions 🚀.  
 
@@ -59,7 +59,7 @@ Best regards,
                   </div>
                   <div>
                     <p className="text-sm text-gray-500 font-medium">Location</p>
-                    <span className="text-gray-800 font-semibold">Bangalore, India</span>
+                    <span className="text-gray-800 font-semibold">Bengaluru, India</span>
                   </div>
                 </div>
               </div>
