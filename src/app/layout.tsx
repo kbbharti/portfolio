@@ -7,7 +7,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Rajesh Dhanda - ML Platform Engineer",
-  description: "Senior ML Platform Engineer & AI Systems Architect with 6+ years of experience",
+  description: "ML Platform Engineer & AI Systems Architect with 4+ years of experience",
 };
 
 export default function RootLayout({
