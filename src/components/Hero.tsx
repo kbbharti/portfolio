@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import Image from 'next/image'
+import { getAssetPath } from '../utils/assets'
 
 export default function Hero() {
   const [displayedName, setDisplayedName] = useState('')
@@ -85,7 +86,7 @@ export default function Hero() {
             <div className="w-80 h-80 sm:w-96 sm:h-96 lg:w-[28rem] lg:h-[28rem] bg-gradient-to-br from-blue-100 to-blue-200 rounded-full flex items-center justify-center shadow-lg overflow-hidden">
               <div className="w-[19rem] h-[19rem] sm:w-[22rem] sm:h-[22rem] lg:w-[26rem] lg:h-[26rem] rounded-full overflow-hidden relative">
                 <Image
-                  src="/profile-picture.png"
+                  src={getAssetPath("/profile-picture.png")}
                   alt="Rajesh Dhanda - ML Platform Engineer"
                   width={416}
                   height={416}

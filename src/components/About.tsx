@@ -1,3 +1,5 @@
+import { getAssetPath } from '../utils/assets'
+
 export default function About() {
   return (
     <section id="about" className="py-20 bg-white">
@@ -18,7 +20,7 @@ export default function About() {
               <div className="text-center">
                 <div className="w-20 h-20 mx-auto mb-4 flex items-center justify-center bg-blue-50 rounded-lg shadow-lg">
                   <img 
-                    src="/Microsoft_Azure.svg" 
+                    src={getAssetPath("/Microsoft_Azure.svg")} 
                     alt="Microsoft Azure" 
                     className="w-12 h-12 object-contain"
                   />
@@ -28,7 +30,7 @@ export default function About() {
               <div className="text-center">
                 <div className="w-20 h-20 mx-auto mb-4 flex items-center justify-center bg-blue-50 rounded-lg shadow-lg">
                   <img 
-                    src="/Google_Cloud_logo.svg" 
+                    src={getAssetPath("/Google_Cloud_logo.svg")} 
                     alt="Google Cloud Platform" 
                     className="w-12 h-12 object-contain"
                   />
@@ -38,7 +40,7 @@ export default function About() {
               <div className="text-center">
                 <div className="w-20 h-20 mx-auto mb-4 flex items-center justify-center bg-red-50 rounded-lg shadow-lg">
                   <img 
-                    src="/databricks.svg" 
+                    src={getAssetPath("/databricks.svg")} 
                     alt="Databricks" 
                     className="w-12 h-12 object-contain"
                   />
@@ -48,7 +50,7 @@ export default function About() {
               <div className="text-center">
                 <div className="w-20 h-20 mx-auto mb-4 flex items-center justify-center bg-blue-50 rounded-lg shadow-lg">
                   <img 
-                    src="/docker_logo.svg" 
+                    src={getAssetPath("/docker_logo.svg")} 
                     alt="Docker" 
                     className="w-12 h-12 object-contain"
                   />
@@ -58,7 +60,7 @@ export default function About() {
               <div className="text-center">
                 <div className="w-20 h-20 mx-auto mb-4 flex items-center justify-center bg-blue-50 rounded-lg shadow-lg">
                   <img 
-                    src="/kubernetes_logo.svg" 
+                    src={getAssetPath("/kubernetes_logo.svg")} 
                     alt="Kubernetes" 
                     className="w-12 h-12 object-contain"
                   />
