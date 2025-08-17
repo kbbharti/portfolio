@@ -26,7 +26,7 @@ export default function Experience() {
     {
       id: 1,
       company: "HALEON",
-      position: "Machine Learning Engineer (MLOps)",
+      position: <>Machine Learning Engineer (<span className="text-purple-600 font-semibold">MLOps</span>)</>,
       duration: "April 2024 - Present",
       location: "Bengaluru, India",
       description: <>Productionizing Data Science Services, Infrastructure, and Pipelines on <strong>Azure</strong> and <strong>Databricks</strong> for scalable and reliable deployment.</>,
@@ -42,7 +42,7 @@ export default function Experience() {
     {
       id: 2,
       company: "CARS24",
-      position: "Machine Learning Engineer (MLOps)",
+      position: <>Machine Learning Engineer (<span className="text-purple-600 font-semibold">MLOps</span>)</>,
       duration: "Sept 2021 - April 2024",
       location: "Gurgaon, India",
       description: <>Productionizing DS/BI/Data-engg/Infras/Pipelines on <a href="https://drive.google.com/file/d/1ys4_Llp7ZkcE6OAZltXG0TYTDloTeyrk/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="font-semibold text-blue-600 hover:text-blue-800 underline">GCP</a> (GKE, Kserve, Triton Inference Server, PostgreSQL, Airflow and VertexAI).</>,
