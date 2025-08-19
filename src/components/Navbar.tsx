@@ -42,9 +42,9 @@ export default function Navbar() {
               <Link href="https://drive.google.com/file/d/1rKgBAFzYi0WNvGAGq2fDO7Rn3BI-jsYL/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-blue-400 hover:bg-gray-800 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 transform hover:scale-105">
                 Resume
               </Link>
-              <Link href="/bucket-list" className="text-gray-300 hover:text-blue-400 hover:bg-gray-800 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 transform hover:scale-105">
+              {/* <Link href="/bucket-list" className="text-gray-300 hover:text-blue-400 hover:bg-gray-800 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 transform hover:scale-105">
                 Bucket List
-              </Link>
+              </Link> */}
               <Link href="/#contact" className="text-gray-300 hover:text-blue-400 hover:bg-gray-800 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 transform hover:scale-105">
                 Contact
               </Link>
@@ -95,9 +95,9 @@ export default function Navbar() {
             <Link href="https://drive.google.com/file/d/1rKgBAFzYi0WNvGAGq2fDO7Rn3BI-jsYL/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-blue-400 hover:bg-gray-800 block px-4 py-3 rounded-lg text-base font-medium transition-all duration-200">
               Resume
             </Link>
-            <Link href="/bucket-list" className="text-gray-300 hover:text-blue-400 hover:bg-gray-800 block px-4 py-3 rounded-lg text-base font-medium transition-all duration-200">
+            {/* <Link href="/bucket-list" className="text-gray-300 hover:text-blue-400 hover:bg-gray-800 block px-4 py-3 rounded-lg text-base font-medium transition-all duration-200">
               Bucket List
-            </Link>
+            </Link> */}
             <Link href="/#contact" className="text-gray-300 hover:text-blue-400 hover:bg-gray-800 block px-4 py-3 rounded-lg text-base font-medium transition-all duration-200">
               Contact
             </Link>
@@ -107,3 +107,4 @@ export default function Navbar() {
     </nav>
   )
 }
+
