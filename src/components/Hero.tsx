@@ -62,9 +62,9 @@ export default function Hero() {
               ML Platform Engineer & AI Systems Architect
             </p>
             <p className="text-lg text-gray-600 mt-6 leading-relaxed">
-              I design and build scalable machine learning platforms that power intelligent applications
-              at enterprise scale. With years of experience across the entire ML lifecycle, I transform
-              data science prototypes into production-ready ML systems.
+              I design, build scalable and resilient machine learning and LLM platforms that power intelligent applications
+              at enterprise scale. With years of experience across ML lifecycles, RAG apps, and agentic tools, 
+              I transform prototypes into production-ready AI systems.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 mt-8">
               <a 
