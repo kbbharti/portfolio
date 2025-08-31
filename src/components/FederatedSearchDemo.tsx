@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 
 const searchQueries = ['medic', 'ship', 'refund', 'pass', 'order'];
 
@@ -191,8 +191,35 @@ function GoogleLikeSearchDemo() {
   const [searchPhase, setSearchPhase] = useState<'typing' | 'autocomplete' | 'suggestions' | 'results'>('typing');
   const [queryIndex, setQueryIndex] = useState(0);
   const [typingIndex, setTypingIndex] = useState(0);
+  const [isVisible, setIsVisible] = useState(false);
+  const demoRef = useRef<HTMLDivElement>(null);
+
+  // Intersection Observer to detect when demo is visible
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsVisible(entry.isIntersecting);
+        if (!entry.isIntersecting) {
+          // Reset animation when not visible to prevent background changes
+          setCurrentQuery('');
+          setSearchPhase('typing');
+          setTypingIndex(0);
+        }
+      },
+      { threshold: 0.3 } // Only start animation when 30% of component is visible
+    );
+
+    if (demoRef.current) {
+      observer.observe(demoRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
 
   useEffect(() => {
+    // Only run animation if the demo is visible
+    if (!isVisible) return;
+    
     const query = searchQueries[queryIndex];
     
     // Typing animation
@@ -230,7 +257,7 @@ function GoogleLikeSearchDemo() {
       }, 4000);
       return () => clearTimeout(timer);
     }
-  }, [searchPhase, typingIndex, queryIndex]);
+  }, [searchPhase, typingIndex, queryIndex, isVisible]); // Added isVisible dependency
 
   const handleAutocompleteClick = (word: string) => {
     setCurrentQuery(word);
@@ -259,24 +286,27 @@ function GoogleLikeSearchDemo() {
   };
 
   return (
-    <div className="bg-gray-300 rounded-xl p-4 w-full">
-      {/* Search Box */}
-      <div className="relative mb-4">
-        <div className="flex items-center bg-white border border-gray-300 rounded-full px-4 py-3 shadow-sm hover:shadow-md transition-shadow">
-          <svg className="w-5 h-5 text-gray-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <div ref={demoRef} className="bg-gradient-to-br from-gray-50 to-gray-100 rounded-xl p-6 w-full border shadow-sm">
+      {/* Only show demo content if visible */}
+      {isVisible ? (
+        <>
+          {/* Search Box */}
+          <div className="relative mb-4">
+            <div className="flex items-center bg-white border-2 border-gray-200 rounded-full px-5 py-4 shadow-lg hover:shadow-xl hover:border-blue-300 transition-all duration-300 transform hover:scale-[1.02]">
+          <svg className="w-5 h-5 text-blue-500 mr-3 animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
           </svg>
-          <div className="flex-1 text-gray-700">
-            <span>{currentQuery}</span>
+          <div className="flex-1 text-gray-800 font-medium">
+            <span className="text-lg">{currentQuery}</span>
             {searchPhase === 'autocomplete' && getAutocompleteWords().length > 0 && (
-              <span className="text-gray-400">{getAutocompleteWords()[0].substring(currentQuery.length)}</span>
+              <span className="text-gray-400 text-lg animate-pulse">{getAutocompleteWords()[0].substring(currentQuery.length)}</span>
             )}
             {searchPhase === 'typing' && (
-              <span className="animate-pulse text-gray-400 ml-1">|</span>
+              <span className="animate-pulse text-blue-500 ml-1 text-lg font-bold">|</span>
             )}
           </div>
           {searchPhase === 'results' && (
-            <svg className="w-4 h-4 text-blue-600 ml-2" fill="currentColor" viewBox="0 0 20 20">
+            <svg className="w-5 h-5 text-green-500 ml-2 animate-bounce" fill="currentColor" viewBox="0 0 20 20">
               <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.293l-3-3a1 1 0 00-1.414 1.414L10.586 9H7a1 1 0 100 2h3.586l-1.293 1.293a1 1 0 101.414 1.414l3-3a1 1 0 000-1.414z" clipRule="evenodd" />
             </svg>
           )}
@@ -286,21 +316,23 @@ function GoogleLikeSearchDemo() {
       {/* Combined Autocomplete and Suggestions Dropdown */}
       {(searchPhase === 'autocomplete' || searchPhase === 'suggestions') && 
        (getAutocompleteWords().length > 0 || getSuggestions().length > 0) && (
-        <div className="bg-white border border-gray-200 rounded-lg shadow-lg mb-4 animate-fadeIn">
+        <div className="bg-white border border-gray-200 rounded-xl shadow-xl mb-6 animate-fadeIn transform transition-all duration-500 hover:shadow-2xl">
           
           {/* Autocomplete Section */}
           {getAutocompleteWords().length > 0 && (
             <div>
-              <div className="px-4 py-2 text-xs text-gray-500 border-b bg-gray-50">Autocomplete - Terms from Search Index</div>
+              <div className="px-5 py-3 text-xs font-semibold text-indigo-600 border-b bg-gradient-to-r from-indigo-50 to-blue-50 rounded-t-xl">
+                ⚡ Autocomplete - Terms from Search Index
+              </div>
               {getAutocompleteWords().slice(0, 2).map((word, idx) => (
-                <div key={idx} className="px-4 py-3 hover:bg-gray-50 cursor-pointer text-sm text-gray-700 animate-slideDown border-b border-gray-100" style={{animationDelay: `${idx * 100}ms`}} onClick={() => handleAutocompleteClick(word)}>
+                <div key={idx} className="px-5 py-4 hover:bg-gradient-to-r hover:from-blue-50 hover:to-indigo-50 cursor-pointer text-sm text-gray-700 animate-slideDown border-b border-gray-100 transition-all duration-300 transform hover:scale-[1.02]" style={{animationDelay: `${idx * 100}ms`}} onClick={() => handleAutocompleteClick(word)}>
                   <div className="flex items-center">
-                    <svg className="w-4 h-4 text-gray-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-4 h-4 text-indigo-500 mr-3 animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
                     </svg>
-                    <span className="font-medium text-blue-600">{currentQuery}</span>
-                    <span className="text-gray-700">{word.substring(currentQuery.length)}</span>
-                    <span className="text-xs text-gray-400 ml-auto">from index</span>
+                    <span className="font-bold text-blue-600">{currentQuery}</span>
+                    <span className="text-gray-800 font-medium">{word.substring(currentQuery.length)}</span>
+                    <span className="text-xs text-indigo-500 ml-auto font-medium bg-indigo-100 px-2 py-1 rounded-full">indexed</span>
                   </div>
                 </div>
               ))}
@@ -310,15 +342,17 @@ function GoogleLikeSearchDemo() {
           {/* Suggestions Section */}
           {getSuggestions().length > 0 && (
             <div>
-              <div className="px-4 py-2 text-xs text-gray-500 border-b bg-gray-50">Suggestions</div>
+              <div className="px-5 py-3 text-xs font-semibold text-emerald-600 border-b bg-gradient-to-r from-emerald-50 to-green-50">
+                💡 Smart Suggestions
+              </div>
               {getSuggestions().slice(0, 3).map((suggestion, idx) => (
-                <a key={idx} href={suggestion.href} target="_blank" rel="noopener noreferrer" className="block px-4 py-3 hover:bg-gray-50 cursor-pointer animate-slideUp border-b border-gray-100 last:border-b-0 no-underline" style={{animationDelay: `${idx * 100}ms`}} onClick={() => handleSuggestionClick(suggestion)}>
+                <a key={idx} href={suggestion.href} target="_blank" rel="noopener noreferrer" className="block px-5 py-4 hover:bg-gradient-to-r hover:from-emerald-50 hover:to-green-50 cursor-pointer animate-slideUp border-b border-gray-100 last:border-b-0 no-underline transition-all duration-300 transform hover:scale-[1.02] group" style={{animationDelay: `${idx * 100}ms`}} onClick={() => handleSuggestionClick(suggestion)}>
                   <div className="flex items-center">
-                    <svg className="w-4 h-4 text-gray-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-4 h-4 text-emerald-500 mr-3 group-hover:animate-spin transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                     </svg>
-                    <span className="text-sm text-gray-700">{suggestion.title}</span>
-                    <svg className="w-3 h-3 text-gray-400 ml-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <span className="text-sm text-gray-800 font-medium group-hover:text-emerald-700 transition-colors">{suggestion.title}</span>
+                    <svg className="w-4 h-4 text-emerald-500 ml-auto group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                     </svg>
                   </div>
@@ -332,19 +366,33 @@ function GoogleLikeSearchDemo() {
       {/* Search Results */}
       {searchPhase === 'results' && getSearchResults().length > 0 && (
         <div className="space-y-4 animate-fadeIn">
-          <div className="text-xs text-gray-500 mb-3">About 1,234,567 results (0.45 seconds)</div>
+          <div className="text-xs text-gray-500 mb-4 flex items-center">
+            <svg className="w-4 h-4 text-green-500 mr-2 animate-pulse" fill="currentColor" viewBox="0 0 20 20">
+              <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.293l-3-3a1 1 0 00-1.414 1.414L10.586 9H7a1 1 0 100 2h3.586l-1.293 1.293a1 1 0 101.414 1.414l3-3a1 1 0 000-1.414z" clipRule="evenodd" />
+            </svg>
+            About <span className="font-semibold"> 1,234,567 </span> results 
+            <span className="ml-1">(0.45 seconds)</span>
+          </div>
           {getSearchResults().map((result, idx) => (
-            <div key={idx} className="bg-white p-4 rounded-lg border border-gray-200 hover:shadow-md transition-shadow cursor-pointer animate-slideUp" style={{animationDelay: `${idx * 150}ms`}}>
-              <div className="flex items-start justify-between mb-2">
-                <h4 className="text-blue-600 font-medium text-lg hover:underline line-clamp-2">{result.title}</h4>
-                <svg className="w-4 h-4 text-gray-400 ml-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div key={idx} className="bg-white p-5 rounded-xl border border-gray-200 hover:shadow-lg hover:border-blue-200 transition-all duration-300 cursor-pointer animate-slideUp transform hover:scale-[1.02] group" style={{animationDelay: `${idx * 150}ms`}}>
+              <div className="flex items-start justify-between mb-3">
+                <h4 className="text-blue-600 font-semibold text-lg hover:text-blue-700 line-clamp-2 group-hover:underline transition-all duration-200">{result.title}</h4>
+                <svg className="w-5 h-5 text-blue-500 ml-3 flex-shrink-0 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                 </svg>
               </div>
-              <div className="text-xs text-green-700 mb-2 truncate">{result.url}</div>
-              <p className="text-gray-600 text-sm leading-relaxed">{result.description}</p>
+              <div className="text-xs text-emerald-600 mb-2 truncate font-medium bg-emerald-50 inline-block px-2 py-1 rounded-md">{result.url}</div>
+              <p className="text-gray-700 text-sm leading-relaxed group-hover:text-gray-800 transition-colors">{result.description}</p>
             </div>
           ))}
+        </div>
+      )}
+        </>
+      ) : (
+        /* Show static placeholder when not visible */
+        <div className="text-center py-8">
+          <div className="text-gray-500 text-sm">Federated Search Demo</div>
+          <div className="text-gray-400 text-xs mt-2">Scroll into view to see animation</div>
         </div>
       )}
     </div>
@@ -354,10 +402,13 @@ function GoogleLikeSearchDemo() {
 export default function FederatedSearchDemo() {
   return (
     <div className="mt-6">
-      <h4 className="text-xl font-bold text-blue-700 mb-4">Federated Search API Demo</h4>
+      <h4 className="text-xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-4 flex items-center">
+        <span className="animate-pulse mr-2"></span>
+        Federated Search API Demo
+      </h4>
       <p className="text-gray-600 text-sm mb-4">
-        Interactive demo of <strong>Autocomplete</strong>, <strong>Suggestions</strong>, and <strong>Search APIs </strong> 
-        Integrated across <strong>15+ help centers</strong> providing results from <strong>brand websites</strong>
+        Interactive demo of <strong className="text-blue-600">Autocomplete</strong>, <strong className="text-emerald-600">Suggestions</strong>, and <strong className="text-purple-600">Search APIs </strong> 
+        Integrated across <strong className="text-indigo-600">15+ help centers</strong> providing results from <strong className="text-orange-600">brand websites</strong>
       </p>
       <GoogleLikeSearchDemo />
     </div>
