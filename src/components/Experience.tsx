@@ -1,4 +1,6 @@
+
 'use client'
+import FederatedSearchDemo from './FederatedSearchDemo'
 
 export default function Experience() {
   // Calculate experience from March 1, 2021 to current date
@@ -32,7 +34,7 @@ export default function Experience() {
       description: <>Productionizing Data Science Services, Infrastructure, and Pipelines on <strong>Azure</strong> and <strong>Databricks</strong> for scalable and reliable deployment.</>,
       achievements: [
         <><span className="font-bold text-blue-600">Prometheus</span>: Implemented end-to-end MLOps framework using <strong>Databricks Bundles</strong>, <strong>Unity Catalog</strong>, and <strong>GitHub Actions</strong>. Built robust CI/CD workflows with linting, bundle validation, pre and post <strong>semantic versioning</strong>, and automated Databricks job orchestration across Dev/UAT/Prod. Enabled dynamic, market and brand specific task generation at <strong>runtime</strong>, versioned model and data persistence in Unity Catalog, reproducible deployments via explicit <strong>semantic release tags</strong>, with outputs seamlessly refreshed in Power BI for stakeholders.</>,
-        <><span className="font-bold text-blue-600">Federated Help Center Search</span>: Architected a federated search solution across 15+ brand help center URLs, integrating web crawlers with <strong>Azure Blob Storage</strong> and <strong>Azure AI Search</strong>. Automated data pipeline scraping, ingestion, indexing, and deployment - using <strong>GitHub Actions</strong> for real-time updates. Providing intelligent <strong>search</strong>, <strong>autocomplete</strong>, and <strong>suggestion</strong> APIs for seamless integration into <strong>user-facing</strong> platforms. Built a POC for <strong>generative</strong> search using <strong>Azure OpenAI</strong>, based on results from Azure AI Search APIs.</>,
+    <><span className="font-bold text-blue-600">Federated Help Center Search</span>: Architected and delivered a federated search solution across 15+ brand help center URLs, providing robust <strong>search</strong>, <strong>autocomplete</strong>, and <strong>suggestion</strong> APIs directly to the frontend team for seamless integration. Currently performing large-scale web crawling from 500+ brand websites (including help centers) across multiple countries, markets, domains, and languages. Automated scraping, ingestion, indexing, and deployment using <strong>Azure Blob Storage</strong>, <strong>Azure AI Search</strong>, and <strong>GitHub Actions</strong> for real-time updates. Focusing on <strong>Agentic AI</strong> for advanced data extraction and enrichment. Built a POC for <strong>generative</strong> search using <strong>Azure OpenAI</strong>, leveraging results from Azure AI Search APIs.</>,
         <><span className="font-bold text-blue-600">Procurement Contract Analysis</span>: Led ML-Ops for a RAG-based (<strong>Agentic-RAG</strong>) system by productionizing modular workflows with <strong>Databricks Asset Bundles</strong>, integrating <strong>Azure Document Intelligence</strong>, Unity Catalog, and model serving endpoints along with automated deployment of <strong>Databricks App</strong>. Built CI/CD pipelines with GitHub Actions for automated, rollback-ready workflows, deployments, and <strong>GitOps</strong>-based orchestration.</>,
         <><span className="font-bold text-blue-600">Asset Vision</span>: Designed, implemented a robust CI/CD pipeline with <strong>GitHub Actions</strong> to build and publish Docker images to GitHub Container Registry (<strong>GHCR</strong>) and Azure Container Registry (<strong>ACR</strong>), enabling automated deployment to <strong>Azure Web App</strong> and microservices on <strong>Kubernetes</strong> cluster for scalable, secure and reliable application management across environments. Applied same approach to streamline deployments in other <strong>RAG</strong> based project.</>,
         <><span className="font-bold text-blue-600">MLOps Template for Databricks</span>: Improved and implemented a comprehensive MLOps template for <strong>Databricks</strong> leveraging <strong>GitHub Actions</strong> to automate CI/CD pipelines, including code linting, testing, environment setup, and seamless deployment of <strong>Spark</strong> jobs, such as model training, validation, and deployment, resulting in significantly enhanced workflow efficiency and reduced deployment times.</>        
@@ -169,6 +171,10 @@ export default function Experience() {
                           <i className="fas fa-check-circle text-green-500 mr-3 mt-1 flex-shrink-0"></i>
                           <div className="text-gray-700">
                             {typeof achievement === 'string' ? achievement : achievement}
+                            {/* Animated demo for Federated Help Center Search achievement */}
+                            {exp.company === 'HALEON' && idx === 1 && (
+                              <FederatedSearchDemo />
+                            )}
                           </div>
                         </li>
                       ))}
