@@ -21,21 +21,81 @@ const autocompleteData = {
 };
 
 const suggestionData = {
-  'medic': ['medical insurance help', 'medicare enrollment guide', 'medicaid eligibility check'],
-  'med': ['medical insurance help', 'medicare enrollment guide', 'medicaid eligibility check'],
-  'me': ['medical insurance help', 'medicare enrollment guide', 'medicaid eligibility check'],
-  'ship': ['shipping policy and rates', 'shipment tracking guide', 'shipping to international locations'],
-  'shi': ['shipping policy and rates', 'shipment tracking guide', 'shipping to international locations'],
-  'sh': ['shipping policy and rates', 'shipment tracking guide', 'shipping to international locations'],
-  'refund': ['refund policy overview', 'how to request refunds', 'refund status checker'],
-  'refu': ['refund policy overview', 'how to request refunds', 'refund status checker'],
-  'ref': ['refund policy overview', 'how to request refunds', 'refund status checker'],
-  'pass': ['password reset instructions', 'password security tips', 'passport renewal process'],
-  'pas': ['password reset instructions', 'password security tips', 'passport renewal process'],
-  'pa': ['password reset instructions', 'password security tips', 'passport renewal process'],
-  'order': ['order tracking and status', 'order history and receipts', 'order cancellation guide'],
-  'ord': ['order tracking and status', 'order history and receipts', 'order cancellation guide'],
-  'or': ['order tracking and status', 'order history and receipts', 'order cancellation guide']
+  'medic': [
+    { title: 'medical insurance help', href: 'https://help.example.com/medical-insurance' },
+    { title: 'medicare enrollment guide', href: 'https://help.example.com/medicare-enrollment' },
+    { title: 'medicaid eligibility check', href: 'https://help.example.com/medicaid-eligibility' }
+  ],
+  'med': [
+    { title: 'medical insurance help', href: 'https://help.example.com/medical-insurance' },
+    { title: 'medicare enrollment guide', href: 'https://help.example.com/medicare-enrollment' },
+    { title: 'medicaid eligibility check', href: 'https://help.example.com/medicaid-eligibility' }
+  ],
+  'me': [
+    { title: 'medical insurance help', href: 'https://help.example.com/medical-insurance' },
+    { title: 'medicare enrollment guide', href: 'https://help.example.com/medicare-enrollment' },
+    { title: 'medicaid eligibility check', href: 'https://help.example.com/medicaid-eligibility' }
+  ],
+  'ship': [
+    { title: 'shipping policy and rates', href: 'https://help.example.com/shipping-policy' },
+    { title: 'shipment tracking guide', href: 'https://help.example.com/shipment-tracking' },
+    { title: 'shipping to international locations', href: 'https://help.example.com/international-shipping' }
+  ],
+  'shi': [
+    { title: 'shipping policy and rates', href: 'https://help.example.com/shipping-policy' },
+    { title: 'shipment tracking guide', href: 'https://help.example.com/shipment-tracking' },
+    { title: 'shipping to international locations', href: 'https://help.example.com/international-shipping' }
+  ],
+  'sh': [
+    { title: 'shipping policy and rates', href: 'https://help.example.com/shipping-policy' },
+    { title: 'shipment tracking guide', href: 'https://help.example.com/shipment-tracking' },
+    { title: 'shipping to international locations', href: 'https://help.example.com/international-shipping' }
+  ],
+  'refund': [
+    { title: 'refund policy overview', href: 'https://help.example.com/refund-policy' },
+    { title: 'how to request refunds', href: 'https://help.example.com/request-refunds' },
+    { title: 'refund status checker', href: 'https://help.example.com/refund-status' }
+  ],
+  'refu': [
+    { title: 'refund policy overview', href: 'https://help.example.com/refund-policy' },
+    { title: 'how to request refunds', href: 'https://help.example.com/request-refunds' },
+    { title: 'refund status checker', href: 'https://help.example.com/refund-status' }
+  ],
+  'ref': [
+    { title: 'refund policy overview', href: 'https://help.example.com/refund-policy' },
+    { title: 'how to request refunds', href: 'https://help.example.com/request-refunds' },
+    { title: 'refund status checker', href: 'https://help.example.com/refund-status' }
+  ],
+  'pass': [
+    { title: 'password reset instructions', href: 'https://help.example.com/password-reset' },
+    { title: 'password security tips', href: 'https://help.example.com/password-security' },
+    { title: 'passport renewal process', href: 'https://help.example.com/passport-renewal' }
+  ],
+  'pas': [
+    { title: 'password reset instructions', href: 'https://help.example.com/password-reset' },
+    { title: 'password security tips', href: 'https://help.example.com/password-security' },
+    { title: 'passport renewal process', href: 'https://help.example.com/passport-renewal' }
+  ],
+  'pa': [
+    { title: 'password reset instructions', href: 'https://help.example.com/password-reset' },
+    { title: 'password security tips', href: 'https://help.example.com/password-security' },
+    { title: 'passport renewal process', href: 'https://help.example.com/passport-renewal' }
+  ],
+  'order': [
+    { title: 'order tracking and status', href: 'https://help.example.com/order-tracking' },
+    { title: 'order history and receipts', href: 'https://help.example.com/order-history' },
+    { title: 'order cancellation guide', href: 'https://help.example.com/order-cancellation' }
+  ],
+  'ord': [
+    { title: 'order tracking and status', href: 'https://help.example.com/order-tracking' },
+    { title: 'order history and receipts', href: 'https://help.example.com/order-history' },
+    { title: 'order cancellation guide', href: 'https://help.example.com/order-cancellation' }
+  ],
+  'or': [
+    { title: 'order tracking and status', href: 'https://help.example.com/order-tracking' },
+    { title: 'order history and receipts', href: 'https://help.example.com/order-history' },
+    { title: 'order cancellation guide', href: 'https://help.example.com/order-cancellation' }
+  ]
 };
 
 const searchResults = {
@@ -172,6 +232,19 @@ function GoogleLikeSearchDemo() {
     }
   }, [searchPhase, typingIndex, queryIndex]);
 
+  const handleAutocompleteClick = (word: string) => {
+    setCurrentQuery(word);
+    setSearchPhase('results');
+  };
+
+  const handleSuggestionClick = (suggestion: { title: string; href: string }) => {
+    // Open the link in a new tab to simulate navigation to help center
+    window.open(suggestion.href, '_blank');
+    // Also update the search query for demo purposes
+    setCurrentQuery(suggestion.title);
+    setSearchPhase('results');
+  };
+
   const getAutocompleteWords = () => {
     return autocompleteData[currentQuery as keyof typeof autocompleteData] || [];
   };
@@ -220,7 +293,7 @@ function GoogleLikeSearchDemo() {
             <div>
               <div className="px-4 py-2 text-xs text-gray-500 border-b bg-gray-50">Autocomplete - Terms from Search Index</div>
               {getAutocompleteWords().slice(0, 2).map((word, idx) => (
-                <div key={idx} className="px-4 py-3 hover:bg-gray-50 cursor-pointer text-sm text-gray-700 animate-slideDown border-b border-gray-100" style={{animationDelay: `${idx * 100}ms`}}>
+                <div key={idx} className="px-4 py-3 hover:bg-gray-50 cursor-pointer text-sm text-gray-700 animate-slideDown border-b border-gray-100" style={{animationDelay: `${idx * 100}ms`}} onClick={() => handleAutocompleteClick(word)}>
                   <div className="flex items-center">
                     <svg className="w-4 h-4 text-gray-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
@@ -239,14 +312,17 @@ function GoogleLikeSearchDemo() {
             <div>
               <div className="px-4 py-2 text-xs text-gray-500 border-b bg-gray-50">Suggestions</div>
               {getSuggestions().slice(0, 3).map((suggestion, idx) => (
-                <div key={idx} className="px-4 py-3 hover:bg-gray-50 cursor-pointer animate-slideUp border-b border-gray-100 last:border-b-0" style={{animationDelay: `${idx * 100}ms`}}>
+                <a key={idx} href={suggestion.href} target="_blank" rel="noopener noreferrer" className="block px-4 py-3 hover:bg-gray-50 cursor-pointer animate-slideUp border-b border-gray-100 last:border-b-0 no-underline" style={{animationDelay: `${idx * 100}ms`}} onClick={() => handleSuggestionClick(suggestion)}>
                   <div className="flex items-center">
                     <svg className="w-4 h-4 text-gray-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                     </svg>
-                    <span className="text-sm text-gray-700">{suggestion}</span>
+                    <span className="text-sm text-gray-700">{suggestion.title}</span>
+                    <svg className="w-3 h-3 text-gray-400 ml-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                    </svg>
                   </div>
-                </div>
+                </a>
               ))}
             </div>
           )}
