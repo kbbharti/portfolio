@@ -354,7 +354,7 @@ function GoogleLikeSearchDemo() {
 export default function FederatedSearchDemo() {
   return (
     <div className="mt-6">
-      <h4 className="text-xl font-bold text-blue-700 mb-4">🔍 Federated Search API Demo</h4>
+      <h4 className="text-xl font-bold text-blue-700 mb-4">Federated Search API Demo</h4>
       <p className="text-gray-600 text-sm mb-4">
         Interactive demo of <strong>Autocomplete</strong>, <strong>Suggestions</strong>, and <strong>Search APIs </strong> 
         Integrated across <strong>15+ help centers</strong> providing results from <strong>brand websites</strong>
