@@ -69,24 +69,15 @@ Best regards,
                   <i className="fas fa-share-alt text-purple-400 mr-2"></i>
                   Let&apos;s Connect
                 </h4>
-                <div className="grid grid-cols-2 lg:grid-cols-2 gap-3">
-                  <a href="https://www.linkedin.com/in/khushbu-bharti-1a4161200" target="_blank" rel="noopener noreferrer" className="group bg-gray-800 p-3 rounded-lg shadow-sm hover:shadow-lg transition-all duration-300 border border-gray-600 hover:border-blue-400">
-                    <div className="flex flex-col items-center text-center">
-                      <div className="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center mb-2 group-hover:bg-blue-600 transition-colors">
-                        <i className="fab fa-linkedin text-blue-400 text-lg group-hover:text-white"></i>
-                      </div>
-                      <span className="text-xs font-semibold text-gray-200 group-hover:text-blue-400">LinkedIn</span>
-                    </div>
-                  </a>
-                  <a href="tel:+917727827134" className="group bg-gray-800 p-3 rounded-lg shadow-sm hover:shadow-lg transition-all duration-300 border border-gray-600 hover:border-green-400">
-                    <div className="flex flex-col items-center text-center">
-                      <div className="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center mb-2 group-hover:bg-green-600 transition-colors">
-                        <i className="fas fa-phone text-green-400 text-lg group-hover:text-white"></i>
-                      </div>
-                      <span className="text-xs font-semibold text-gray-200 group-hover:text-green-400">Phone</span>
-                    </div>
-                  </a>
-                </div>
+                <a href="https://www.linkedin.com/in/khushbu-bharti-1a4161200" target="_blank" rel="noopener noreferrer" className="flex items-center p-4 bg-gray-800 rounded-lg shadow-sm hover:shadow-lg transition-all duration-300 border border-gray-600 hover:border-blue-400">
+                  <div className="w-12 h-12 bg-gray-700 rounded-full flex items-center justify-center mr-4 group-hover:bg-blue-600 transition-colors">
+                    <i className="fab fa-linkedin text-blue-400 group-hover:text-white"></i>
+                  </div>
+                  <div>
+                    <p className="text-sm text-gray-400 font-medium">LinkedIn</p>
+                    <span className="text-gray-200 font-semibold text-sm">Connect with me</span>
+                  </div>
+                </a>
               </div>
             </div>
             
