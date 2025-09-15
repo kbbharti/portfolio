@@ -1,11 +1,10 @@
 
 'use client'
-import FederatedSearchDemo from './FederatedSearchDemo'
 
 export default function Experience() {
-  // Calculate experience from March 1, 2021 to current date
+  // Calculate experience from 2020 to current date
   const getExperience = () => {
-    const startDate = new Date('2021-03-01')
+    const startDate = new Date('2020-01-01')
     const currentDate = new Date()
     
     // Calculate total days
@@ -27,322 +26,219 @@ export default function Experience() {
   const experiences = [
     {
       id: 1,
-      company: "HALEON",
-      position: <>Machine Learning Engineer (<span className="text-purple-600 font-semibold">MLOps</span>)</>,
-      duration: "April 2024 - Present",
+      company: "COMPUTACENTER",
+      position: <>Corporate Communications & Marketing Specialist</>,
+      duration: "2025 - Present",
       location: "Bengaluru, India",
-      description: <>Productionizing DS Services, Infrastructure, and Pipelines on <strong>Azure</strong> and <strong>Databricks</strong> for scalable and reliable deployment.</>,
+      description: <>Leading corporate communications strategies for both internal and external stakeholders, ensuring consistent and impactful messaging across channels.</>,
       achievements: [
-        <><span className="font-bold text-blue-600">Prometheus</span>: Implemented end-to-end MLOps framework using <strong>Databricks Bundles</strong>, <strong>Unity Catalog</strong>, and <strong>GitHub Actions</strong>. Built robust CI/CD workflows with linting, bundle validation, pre and post <strong>semantic versioning</strong>, and automated Databricks job orchestration across Dev/UAT/Prod. Enabled dynamic, market and brand specific task generation at <strong>runtime</strong>, versioned model and data persistence in Unity Catalog, reproducible deployments via explicit <strong>semantic release tags</strong>, with outputs seamlessly refreshed in Power BI for stakeholders.</>,
-    <><span className="font-bold text-blue-600">Federated Help Center Search</span>: Architected and delivered a federated search solution across 15+ brand help center URLs, providing robust <strong>search</strong>, <strong>autocomplete</strong>, and <strong>suggestion</strong> APIs directly to the frontend team for seamless integration. Currently performing large-scale web crawling from 500+ brand websites (including help centers) across multiple countries, markets, domains, and languages. Automated scraping, ingestion, indexing, and deployment using <strong>Azure Blob Storage</strong>, <strong>Azure AI Search</strong>, and <strong>GitHub Actions</strong> for real-time updates. Focusing on <strong>Agentic AI</strong> for advanced data extraction and enrichment. Built a POC for <strong>generative</strong> search using <strong>Azure OpenAI</strong>, leveraging results from Azure AI Search APIs.</>,
-        <><span className="font-bold text-blue-600">Procurement Contract Analysis</span>: Led ML-Ops for a RAG-based (<strong>Agentic-RAG</strong>) system by productionizing modular workflows with <strong>Databricks Asset Bundles</strong>, integrating <strong>Azure Document Intelligence</strong>, Unity Catalog, and model serving endpoints along with automated deployment of <strong>Databricks App</strong>. Built CI/CD pipelines with GitHub Actions for automated, rollback-ready workflows, deployments, and <strong>GitOps</strong>-based orchestration.</>,
-        <><span className="font-bold text-blue-600">Asset Vision</span>: Designed, implemented a robust CI/CD pipeline with <strong>GitHub Actions</strong> to build and publish Docker images to GitHub Container Registry (<strong>GHCR</strong>) and Azure Container Registry (<strong>ACR</strong>), enabling automated deployment to <strong>Azure Web App</strong> and microservices on <strong>Kubernetes</strong> cluster for scalable, secure and reliable application management across environments. Applied same approach to streamline deployments in other <strong>RAG</strong> based project.</>,
-        <><span className="font-bold text-blue-600">MLOps Template for Databricks</span>: Improved and implemented a comprehensive MLOps template for <strong>Databricks</strong> leveraging <strong>GitHub Actions</strong> to automate CI/CD pipelines, including code linting, testing, environment setup, and seamless deployment of <strong>Spark</strong> jobs, such as model training, validation, and deployment, resulting in significantly enhanced workflow efficiency and reduced deployment times.</>        
+        <><span className="font-bold text-blue-400">Corporate Communications Strategy</span>: Design and execute corporate communications strategies for both internal and external stakeholders, ensuring consistent and impactful messaging across channels.</>,
+        <><span className="font-bold text-blue-400">Executive Branding & PR</span>: Lead public relations and executive branding initiatives for the company and country head, including PR campaigns, media engagement, and thought-leadership positioning.</>,
+        <><span className="font-bold text-blue-400">Content Creation & Scripting</span>: Conceptualize and script video content, speeches, and executive communications, enhancing leadership visibility and brand authority.</>,
+        <><span className="font-bold text-blue-400">Employer Branding</span>: Drive employer branding strategies to strengthen the company&apos;s online presence and talent brand, delivering measurable improvements in engagement.</>,
+        <><span className="font-bold text-blue-400">Data-Driven Presentations</span>: Create high-impact corporate presentations and market insight decks using data analytics and visualization tools (Power BI, Tableau, Google Analytics, Excel) to support strategic decision-making.</>,
+        <><span className="font-bold text-blue-400">Client Partnership Stories</span>: Collaborate with client teams (e.g., Apple, Dell) to design campaign decks and storytelling frameworks that showcase their success as Computacenter partners.</>,
+        <><span className="font-bold text-blue-400">Project Management</span>: Manage cross-functional communications projects, ensuring timely delivery, brand consistency, and alignment with corporate objectives.</>
       ],
-      technologies: ["Azure", "Databricks", "GitHub Actions", "Docker", "Kubernetes", "Unity Catalog", "Azure AI Search", "Azure OpenAI", "Spark", "Python"]
+      technologies: ["Power BI", "Tableau", "Google Analytics", "Excel", "Corporate Communications", "PR", "Employer Branding", "Content Strategy"]
     },
     {
       id: 2,
-      company: "CARS24",
-      position: <>Machine Learning Engineer (<span className="text-purple-600 font-semibold">MLOps</span>)</>,
-      duration: "Sept 2021 - April 2024",
-      location: "Gurgaon, India",
-      description: <>Productionizing DS/BI/Data-engg/Infras/Pipelines on <a href="https://drive.google.com/file/d/1ys4_Llp7ZkcE6OAZltXG0TYTDloTeyrk/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="font-semibold text-purple-600 hover:text-purple-800 underline">GCP</a> (GKE, Kserve, Triton Inference Server, PostgreSQL, Airflow and VertexAI).</>,
+      company: "AMAZON",
+      position: <>Marketing Executive</>,
+      duration: "2022 - 2025",
+      location: "Bengaluru, India",
+      description: <>Spearheaded seller education, retention, and rewards adoption campaigns across Sale Event Planner and Seller Rewards Programs.</>,
       achievements: [
-        <><span className="font-bold text-blue-600">CI/CD Infrastructure</span>: Robust <strong>CI/CD</strong> pipelines using <strong>Cloud Build</strong> for seamless and automated deployment of microservices and batch services on <strong>GKE</strong>, <strong>Cloud Functions</strong>, and <strong>Cloud Run</strong>, significantly reducing deployment errors, manual effort, and turnaround times across environments. Collaborated with DS team to optimise code and model inference for higher throughput.</>,
-        <><span className="font-bold text-blue-600">EdgeDB Inference Store</span>: Architected, deployed and <strong>upgraded</strong> <a href="https://drive.google.com/file/d/1EiB-sycgO4hvr8fHgADF9dxfzn7_stRd/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="font-semibold text-purple-600 hover:text-purple-800 underline">Inference store</a> (<strong>EdgeDB</strong> on Google Kubernetes Engine with provisioned <strong>PostgreSQL</strong> instance as backend) with <strong>FastAPI</strong> endpoints deployed in GKE. API employed across various DS Services for efficient caching and retrieval of inferences in real time (latency around <strong>5ms</strong>), as well as in batch processing jobs with traffic coming from Queue (<strong>PubSub</strong>) or an Orchestrator (<strong>Airflow</strong>). Integrated <strong>CI/CD pipelines</strong> for automated deployments in GCP (<a href="https://drive.google.com/file/d/1N74h6xg6Mt_vOa5Wg5WjDznmxcH0gO5o/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="font-semibold text-purple-600 hover:text-purple-800 underline">Upgrade Flow</a>).</>,
-        <><span className="font-bold text-blue-600">Feast Feature Store</span>: Efficiently deployed <strong>Feast</strong> <a href="https://drive.google.com/file/d/1kRH6hHc4K-P7_nUQc4gfLsYowGT7T8Bb/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="font-semibold text-purple-600 hover:text-purple-800 underline">feature-server</a> on Google Kubernetes Engine, leveraging an automated materialization pipeline for real-time data updates in <strong>Redis</strong> (Online Store) and <strong>BigQuery</strong> (Offline Store) via Cloud Functions triggered by a diverse range of team data uploads in a GCS bucket. API effectively addresses the challenge of accessing up-to-date features from CSV files and currently employed in 10+ DS services, delivering features with minimal latency (<strong>&lt;10ms</strong>). <strong>CI/CD</strong> enabled for robust rollouts.</>,
-        <><span className="font-bold text-blue-600">Data Flow Pipeline</span>: Built <a href="https://drive.google.com/file/d/1vI9r8uVN2BiVGF7693YAazSOz1yyX0YX/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="font-semibold text-purple-600 hover:text-purple-800 underline">data flow pipeline</a> to optimize the timely data sync between Snowflake and Google Sheets using <strong>Airflow</strong>, <strong>Pub-Sub</strong>, <strong>EdgeDB</strong> and <strong>GKE</strong>. Syncing data for approx 2500 Sheets with roughly 15000 Jobs/day. (<a href="https://medium.com/cars24-data-science-blog/upgrading-data-flow-pipeline-cars24-1b6b8aea48e" target="_blank" rel="noopener noreferrer" className="font-semibold text-green-600 hover:text-green-800 underline">blog</a>) (<a href="https://www.linkedin.com/posts/moderndatastack_optimizing-data-flow-cars24-activity-7026209461774016513-vJSR/?utm_source=share&utm_medium=member_desktop" target="_blank" rel="noopener noreferrer" className="font-semibold text-purple-600 hover:text-purple-800 underline">citation</a> by Modern Data Stack, <a href="https://www.dataengineeringweekly.com/i/96964228/cars-upgrading-data-flow-pipeline-at-cars" target="_blank" rel="noopener noreferrer" className="font-semibold text-purple-600 hover:text-purple-800 underline">citation</a> by Data Engineering Weekly).</>,
-        <><span className="font-bold text-blue-600">Airflow Orchestration Platform</span>: Deployed, administered, upgraded a robust <strong>Airflow</strong> infrastructure on Google Kubernetes Engine, overseeing <strong>70+</strong> diverse git synchronised DAGs running approx <strong>1000+</strong> times daily, covering a total of <strong>3800+</strong> tasks executions to support various DS-BI teams. Efficiently managed the execution of tasks, encompassing Cloud Function triggering, job scheduling, PubSub messaging, EdgeDB integration for jobs status update, and Snowflake-to-Google Sheets data synchronization and seamless integration with diverse GCP services. Implemented <strong>RBAC</strong> to enhance team visibility, established automated log cleanup with ensuring a streamlined, well-maintained system.</>,
-        <><span className="font-bold text-blue-600">NBFC Infrastructure Migration</span>: Spearheaded <a href="https://drive.google.com/file/d/1XvlTULCTfEpB50KFcBauyYWsQqSKzlrg/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="font-semibold text-purple-600 hover:text-purple-800 underline">migration</a> of NBFC DS infrastructure from <strong>AWS</strong> to <strong>GCP</strong>, breaking down monolith into scalable sub-monoliths and GKE-based microservices. Decoupled DB operations, slashing response times from <strong>3 seconds</strong> to <strong>503ms</strong> (99th percentile), eliminated overall timeouts, previously at <strong>8-9%</strong>. Implemented streamlined data flow via Pub/Sub and Cloud Functions, enabling efficient EdgeDB updates and hourly Snowflake synchronization. CI/CD pipelines orchestrated for seamless deployment of microservices on GKE and respective cloud functions.</>,
-        <><span className="font-bold text-blue-600">Triton Python SDK</span>: Developed a pip-installable, reusable Python wheel package for seamless integration with <strong>Triton Inference Server</strong>, supporting high-performance model inference by handling both <strong>HTTP</strong> and <strong>GRPC</strong> requests in <strong>synchronous</strong> and <strong>asynchronous</strong> modes, with built-in logging, error handling, and configuration flexibility.</>,
-        <><span className="font-bold text-blue-600">Request-Response Store</span>: Designed, deployed high-performance APIs <strong>Request-Response Store</strong> using <strong>FastAPI</strong>, featuring <strong>client authentication</strong>, <strong>rate limiting</strong> and <strong>low 5ms latency</strong>. Orchestrated storage of request-response in <strong>EdgeDB</strong>, synchronized to <strong>Snowflake</strong> based on team-defined frequencies, and leveraged by 10+ DS services.</>,
-        <><span className="font-bold text-blue-600">Customer Interaction Analytics</span>: Designed and implemented a cloud-based workflow for end-to-end processing of customer interactions data. The workflow encompasses data ingestion from Snowflake, audio download, transcription generation, information extraction, and automated customer summary generation. This system is orchestrated through <strong>Airflow</strong> and leverages Google Cloud Functions, Cloud Storage, <strong>Kserve InferenceService</strong>, <strong>Triton</strong>, <strong>MongoDB</strong> and <strong>EdgeDB</strong>.</>,
-        <><span className="font-bold text-blue-600">Data Platform R&D</span>: Experimenting with deploying <strong>Doris</strong>, <strong>StarRocks</strong>, and associated open-source tools on <strong>GKE</strong> to construct a scalable and high-performance data platform, incorporating <strong>S3</strong>-compatible object storage via <strong>MINIO/GCS</strong>, implementing access control and data retention policies, and ensuring effective <strong>Kubernetes</strong> cluster monitoring and alerting through <strong>Grafana&apos;s</strong> dashboards utilizing <strong>Prometheus</strong> as a primary time-series data source.</>,
-        <><span className="font-bold text-blue-600">Audio Embeddings Search</span>: Experimented <a href="https://drive.google.com/file/d/19KvVtSsnsxLBpRJoE9-SFJGd9gzmTkkN/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="font-semibold text-purple-600 hover:text-purple-800 underline">Minio and Milvus</a> integration to extract audio embeddings from Minio, enabling efficient search for similar content, Redis for metadata storage.</>,
-        <>Commended and highly appreciated by the COO and VP (DS and BI) for exemplary performance and remarkable contributions.</>
+        <><span className="font-bold text-blue-400">Program Marketing Success</span>: Achieved <strong>13% YoY increase in adoption</strong> and <strong>40% growth in Seller Rewards Program</strong> through strategic campaign design and execution.</>,
+        <><span className="font-bold text-blue-400">Multi-Channel Campaigns</span>: Delivered onsite marketing, newsletters, and social campaigns targeting SMB sellers across diverse channels for maximum reach and engagement.</>,
+        <><span className="font-bold text-blue-400">Global Coordination</span>: Coordinated with cross-functional teams across India, UK, USA, and China for seller education initiatives, ensuring consistent messaging and program delivery.</>,
+        <><span className="font-bold text-blue-400">Retention Strategy</span>: Designed and implemented retention-focused messaging and incentive programs that directly contributed to revenue growth and seller satisfaction.</>
       ],
-      technologies: ["GCP", "GKE", "Kserve", "Triton Inference Server", "PostgreSQL", "Airflow", "VertexAI", "EdgeDB", "FastAPI", "Feast", "Redis", "BigQuery", "Cloud Build", "Pub/Sub", "Snowflake", "MongoDB", "Doris", "StarRocks", "MINIO", "Milvus", "Grafana", "Prometheus"],
-      blogs: [
-        {
-          title: "Optimizing Data Flow @ CARS24",
-          url: "https://medium.com/cars24-data-science-blog/optimizing-data-flow-cars24-4c0a17b797d1"
-        },
-        {
-          title: "ML in Production @ CARS24 (Part 1)",
-          url: "https://medium.com/cars24-data-science-blog/ml-in-production-cars24-part-1-e712f54e20a2"
-        },
-        {
-          title: "Upgrading Data Flow Pipeline @ CARS24",
-          url: "https://medium.com/cars24-data-science-blog/upgrading-data-flow-pipeline-cars24-1b6b8aea48e"
-        },
-        {
-          title: "ML in Production @ CARS24 (Part 2)",
-          url: "https://medium.com/cars24-data-science-blog/ml-in-production-cars24-part-2-6a717340d8e6"
-        }
-      ]
+      technologies: ["Program Marketing", "Campaign Management", "Cross-functional Coordination", "Retention Marketing", "Global Marketing"]
     },
     {
       id: 3,
-      company: "Deep Sight AI Labs",
-      position: "Computer Vision Software Engineer",
-      duration: "June 2021 - Sept 2021",
-      location: "Remote",
-      description: <>Developed solutions for <strong>object detection</strong>, <strong>object tracking</strong>, and <strong>video surveillance</strong> utilizing <strong>Deep Learning</strong> techniques.</>,
+      company: "SHOPPERS STOP",
+      position: <>Senior Executive – Marketing</>,
+      duration: "2021 - 2022",
+      location: "Bengaluru, India",
+      description: <>Developed and executed integrated marketing campaigns to boost sales and customer engagement across digital and offline channels.</>,
       achievements: [
-        <>Implemented a reference direction-based <strong>entry-exit system</strong> and <strong>Object Counting Feature</strong> using <strong>DeepSort</strong>, showcased in video. </>,
-        <>Conducted <strong>TensorFlow Lite</strong> model conversion of <strong>DeepSort</strong> and executed its deployment on <strong>Raspberry Pi</strong> hardware.</>
+        <><span className="font-bold text-blue-400">Campaign Development</span>: Developed and executed in-store and digital marketing campaigns to boost sales and customer engagement across multiple touchpoints.</>,
+        <><span className="font-bold text-blue-400">Vendor Coordination</span>: Coordinated with vendors and creative agencies for branding collaterals, PR, and customer activations, ensuring brand consistency.</>,
+        <><span className="font-bold text-blue-400">Seasonal Campaigns</span>: Managed seasonal campaigns and promotional events, improving store traffic and conversion rates significantly.</>,
+        <><span className="font-bold text-blue-400">Integrated Strategy</span>: Directed integrated performance marketing & content campaigns, working with agencies to unify strategy and ensure brand consistency across touchpoints.</>
       ],
-      technologies: ["Computer Vision", "Deep Learning", "DeepSort", "TensorFlow Lite", "Raspberry Pi", "Object Detection", "Object Tracking", "Video Surveillance"],
-      video: {
-        title: "Directions & Counting of moving Vehicles with velocity vector using Deep SORT",
-        url: "https://www.youtube.com/watch?v=l9d9lOKmxEs&t=1s",
-        thumbnail: "https://img.youtube.com/vi/l9d9lOKmxEs/maxresdefault.jpg"
-      }
+      technologies: ["Integrated Marketing", "Performance Marketing", "Brand Management", "Campaign Coordination", "Vendor Management"]
     },
     {
       id: 4,
-      company: "DocBot+",
-      position: "Artificial Intelligence Engineer Intern",
-      duration: "March 2021 - May 2021",
-      location: "Remote",
-      description: <>Developed intelligent healthcare solutions focusing on <strong>disease diagnosis</strong> and <strong>symptom analysis</strong> using <strong>machine learning</strong> algorithms.</>,
+      company: "RANANJAY EXPORTS",
+      position: <>Content Writer & UX Contributor</>,
+      duration: "2020 - 2021",
+      location: "Jaipur, India",
+      description: <>Produced blogs, UX content & marketing copy for global jewelry markets while enhancing digital storytelling & user journeys.</>,
       achievements: [
-        <>Developed algorithm for <strong>many-to-many mapping</strong> of symptoms to diseases, enabling <strong>disease diagnosis</strong> based on symptom sets.</>,
-        <>Created mathematical formulation to facilitate <strong>symptom recommendation</strong>, improving user experience and healthcare decision-making.</>,
-        <>Generated random datasets to rigorously test and optimize <strong>ML algorithms</strong> for <strong>recommendation systems</strong>.</>
+        <><span className="font-bold text-blue-400">Content Production</span>: Produced blogs, UX content & marketing copy for global jewelry markets, targeting diverse international audiences.</>,
+        <><span className="font-bold text-blue-400">Digital Storytelling</span>: Enhanced digital storytelling & user journeys, increasing engagement and user satisfaction across digital platforms.</>,
+        <><span className="font-bold text-blue-400">User Experience</span>: Contributed to improved user experience through strategic content placement and narrative development, optimizing conversion paths.</>
       ],
-      technologies: ["Machine Learning", "Data Analysis", "Algorithm Development", "Healthcare AI", "Python", "Recommendation Systems"]
+      technologies: ["Content Writing", "UX Writing", "Digital Storytelling", "Global Marketing", "E-commerce Content"]
+    },
+    {
+      id: 5,
+      company: "AMAZON",
+      position: <>Site Curator – Fashion & Central Team</>,
+      duration: "2019 - 2020",
+      location: "Bengaluru, India",
+      description: <>Curated and managed fashion content and onsite merchandising for Amazon Fashion, partnering with category managers and brands.</>,
+      achievements: [
+        <><span className="font-bold text-blue-400">Content Curation</span>: Curated and managed fashion content and onsite merchandising for Amazon Fashion, ensuring brand alignment and trend relevance.</>,
+        <><span className="font-bold text-blue-400">Partnership Management</span>: Partnered with category managers, designers, and brands to ensure aligned visual merchandising and current fashion trends.</>,
+        <><span className="font-bold text-blue-400">User Experience Enhancement</span>: Enhanced user experience by optimizing product placement and editorial storytelling, improving customer engagement and conversion rates.</>
+      ],
+      technologies: ["Content Curation", "Visual Merchandising", "Fashion Marketing", "Editorial Strategy", "Brand Partnership"]
+    }
+  ]
+
+  const caseStudies = [
+    {
+      title: "Employer Branding at Computacenter",
+      challenge: "Attract & retain top talent in a competitive tech market.",
+      action: "Built strategic employer branding campaigns, crafted leadership communication, aligned internal & external branding.",
+      impact: "Increased visibility in the talent market, improved retention & employee advocacy."
+    },
+    {
+      title: "Amazon Seller Rewards Program",
+      challenge: "Low adoption of new seller rewards program.",
+      action: "Designed multi-channel program marketing strategy across global teams, using adoption campaigns, retention-focused messaging, and incentives.",
+      impact: "Achieved 40% adoption growth, directly contributing to revenue growth."
+    },
+    {
+      title: "Integrated Campaigns at Shoppers Stop",
+      challenge: "Fragmented campaigns across digital & offline channels.",
+      action: "Directed integrated performance marketing & content campaigns, working with agencies to unify strategy.",
+      impact: "Increased customer engagement & ensured brand consistency across touchpoints."
     }
   ]
 
   return (
-    <section id="experience" className="py-20 bg-gradient-to-br from-gray-50 via-white to-blue-50">
+    <section id="experience" className="py-20 bg-gradient-to-br from-black via-gray-900 to-black">
       <div className="max-w-[90rem] mx-auto px-6 sm:px-8 lg:px-12">
         <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
+          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
             Professional Experience
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto mb-6 rounded-full"></div>
-          <p className="text-xl text-gray-700 font-medium">
-            <span className="text-2xl font-bold text-blue-600">{getExperience()}</span> of building scalable ML systems and platforms
+          <div className="w-24 h-1 bg-gradient-to-r from-blue-400 to-purple-400 mx-auto mb-6 rounded-full"></div>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+            {getExperience()} of experience in corporate communications, marketing strategy, and brand development across diverse industries
           </p>
         </div>
 
-        <div className="space-y-16">
-          {experiences.map((exp, index) => (
-            <div key={exp.id} className="relative group">
-              {/* Timeline line */}
-              {index !== experiences.length - 1 && (
-                <div className="absolute left-8 top-20 w-1 h-full bg-gradient-to-b from-blue-400 to-purple-400 rounded-full opacity-60"></div>
-              )}
-              
-              {/* Timeline dot */}
-              <div className="absolute left-6 top-6 w-6 h-6 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full border-4 border-white shadow-xl animate-pulse group-hover:scale-125 transition-transform duration-300"></div>
-              
-              {/* Content */}
-              <div className="ml-20">
-                <div className="bg-white border border-gray-200 rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:scale-[1.02] group-hover:border-blue-300">
-                  <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between mb-6">
+        <div className="space-y-8">
+          {experiences.map((exp) => (
+            <div key={exp.id} className="group relative">
+              <div className="bg-gray-800 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 border border-gray-700 overflow-hidden">
+                <div className="p-8 lg:p-10">
+                  <div className="flex flex-col lg:flex-row lg:items-start gap-6">
                     <div className="flex-1">
-                      <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors duration-300">
-                        {exp.position}
-                      </h3>
-                      <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4 text-gray-600">
-                        <span className="font-bold text-blue-600 text-lg bg-blue-50 px-3 py-1 rounded-full">{exp.company}</span>
-                        <span className="hidden sm:block text-blue-400">•</span>
-                        <span className="font-medium text-gray-700 bg-gray-100 px-3 py-1 rounded-full">{exp.duration}</span>
-                        <span className="hidden sm:block text-blue-400">•</span>
-                        <span className="font-medium text-gray-700 bg-gray-100 px-3 py-1 rounded-full flex items-center">
-                          <svg className="w-4 h-4 mr-1 text-red-500" fill="currentColor" viewBox="0 0 20 20">
-                            <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
-                          </svg>
-                          {exp.location}
-                        </span>
+                      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4">
+                        <div>
+                          <h3 className="text-2xl font-bold text-white mb-2">
+                            {exp.position}
+                          </h3>
+                          <div className="flex items-center text-blue-400 font-semibold text-lg mb-2">
+                            <i className="fas fa-building mr-2"></i>
+                            {exp.company}
+                          </div>
+                        </div>
+                        <div className="text-right">
+                          <div className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-gray-700 text-blue-400 mb-2">
+                            <i className="fas fa-calendar-alt mr-2"></i>
+                            {exp.duration}
+                          </div>
+                          <div className="flex items-center text-gray-400 text-sm">
+                            <i className="fas fa-map-marker-alt mr-2"></i>
+                            {exp.location}
+                          </div>
+                        </div>
                       </div>
-                    </div>
-                  </div>
-                  
-                  <div className="text-gray-700 mb-8 leading-relaxed text-lg bg-gray-50 p-4 rounded-xl border-l-4 border-blue-400">
-                    {typeof exp.description === 'string' ? exp.description : exp.description}
-                  </div>
-                  
-                  <div className="mb-8">
-                    <h4 className="text-xl font-bold text-gray-900 mb-6 flex items-center">
-                      <svg className="w-6 h-6 mr-3 text-green-500" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.293l-3-3a1 1 0 00-1.414 1.414L10.586 9H7a1 1 0 100 2h3.586l-1.293 1.293a1 1 0 101.414 1.414l3-3a1 1 0 000-1.414z" clipRule="evenodd" />
-                      </svg>
-                      Key Achievements
-                    </h4>
-                    <ul className="space-y-4">
-                      {exp.achievements.map((achievement, idx) => (
-                        <li key={idx} className="group">
-                          <div className="text-gray-700 leading-relaxed bg-white p-4 rounded-xl shadow-sm border border-gray-100 hover:shadow-md hover:border-blue-200 transition-all duration-300">
-                            {typeof achievement === 'string' ? achievement : achievement}
-                            {/* Animated demo for Federated Help Center Search achievement */}
-                            {exp.company === 'HALEON' && idx === 1 && (
-                              <FederatedSearchDemo />
-                            )}
-                          </div>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                  
-                  <div className="mb-8">
-                    <h4 className="text-xl font-bold text-gray-900 mb-6 flex items-center">
-                      <span className="text-2xl mr-3">⚙️</span>
-                      Technologies Used
-                    </h4>
-                    <div className="flex flex-wrap gap-3">
-                      {exp.technologies.map((tech, idx) => (
-                        <span
-                          key={idx}
-                          className="bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-semibold hover:bg-blue-200 transition-colors duration-200 shadow-sm cursor-default"
-                        >
-                          {tech}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
 
-                  {/* Video Showcase Section */}
-                  {exp.video && (
-                    <div className="mb-8">
-                      <h4 className="text-xl font-bold text-gray-900 mb-6 flex items-center">
-                        <svg className="w-6 h-6 mr-3 text-red-500" fill="currentColor" viewBox="0 0 20 20">
-                          <path d="M2 6a2 2 0 012-2h6l2 2h6a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6zM14.553 7.106A1 1 0 0014 8v4a1 1 0 00.553.894l2 1A1 1 0 0018 13V7a1 1 0 00-1.447-.894l-2 1z" />
-                        </svg>
-                        Video Showcase
-                      </h4>
-                      <div className="relative">
-                        <a
-                          href={exp.video.url}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="block relative overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 group"
-                        >
-                          <img
-                            src={exp.video.thumbnail}
-                            alt={exp.video.title}
-                            className="w-full h-72 object-cover transition-transform duration-300"
-                            onError={(e) => {
-                              console.log('Thumbnail failed to load:', exp.video.thumbnail);
-                              // Fallback to different quality thumbnails if maxres fails
-                              const target = e.target as HTMLImageElement;
-                              if (target.src.includes('maxresdefault')) {
-                                console.log('Trying hqdefault...');
-                                target.src = target.src.replace('maxresdefault', 'hqdefault');
-                              } else if (target.src.includes('hqdefault')) {
-                                console.log('Trying mqdefault...');
-                                target.src = target.src.replace('hqdefault', 'mqdefault');
-                              } else if (target.src.includes('mqdefault')) {
-                                console.log('Trying default thumbnail...');
-                                target.src = target.src.replace('mqdefault', 'default');
-                              } else {
-                                console.log('All thumbnails failed, using placeholder');
-                                // Final fallback to a placeholder
-                                target.src = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjQwIiBoZWlnaHQ9IjM2MCIgdmlld0JveD0iMCAwIDY0MCAzNjAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSI2NDAiIGhlaWdodD0iMzYwIiBmaWxsPSIjNEEzQUZGIi8+Cjx0ZXh0IHg9IjMyMCIgeT0iMTgwIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjQiIGZpbGw9IndoaXRlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkeT0iLjNlbSI+VmlkZW8gVGh1bWJuYWlsPC90ZXh0Pgo8L3N2Zz4=';
-                              }
-                            }}
-                            onLoad={() => {
-                              console.log('Thumbnail loaded successfully:', exp.video.thumbnail);
-                            }}
-                          />
-                          {/* Play button overlay */}
-                          <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center group-hover:bg-opacity-30 transition-all duration-500">
-                            <div className="bg-gradient-to-r from-red-500 to-red-600 rounded-full p-6 group-hover:from-red-600 group-hover:to-red-700 transition-all duration-300 shadow-2xl transform group-hover:scale-110 animate-pulse">
-                              <svg className="w-10 h-10 text-white ml-1" fill="currentColor" viewBox="0 0 20 20">
-                                <path d="M6.3 2.841A1.5 1.5 0 004 4.11v11.78a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z"/>
-                              </svg>
-                            </div>
-                          </div>
-                          {/* Video title overlay */}
-                          <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black via-black/70 to-transparent p-6">
-                            <h5 className="text-white font-bold text-xl mb-2">{exp.video.title}</h5>
-                            <p className="text-gray-300 text-sm flex items-center">
-                              <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                                <path d="M10 12a2 2 0 100-4 2 2 0 000 4z" />
-                                <path fillRule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clipRule="evenodd" />
-                              </svg>
-                              Click to watch on YouTube
-                            </p>
-                          </div>
-                        </a>
+                      <div className="mb-6">
+                        <p className="text-gray-300 leading-relaxed text-lg">
+                          {exp.description}
+                        </p>
                       </div>
-                    </div>
-                  )}
 
-                  {/* Blogs Section */}
-                  {exp.blogs && (
-                    <div className="mb-8">
-                      <h4 className="text-xl font-bold text-gray-900 mb-6 flex items-center">
-                        <svg className="w-6 h-6 mr-3 text-green-500" fill="currentColor" viewBox="0 0 20 20">
-                          <path d="M9 4.804A7.968 7.968 0 005.5 4c-1.255 0-2.443.29-3.5.804v10A7.969 7.969 0 015.5 14c1.669 0 3.218.51 4.5 1.385A7.962 7.962 0 0114.5 14c1.255 0 2.443.29 3.5.804v-10A7.968 7.968 0 0014.5 4c-1.255 0-2.443.29-3.5.804V12a1 1 0 11-2 0V4.804z" />
-                        </svg>
-                        Blogs Written & Contributed
-                      </h4>
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        {exp.blogs.map((blog: { url: string; title: string }, idx: number) => (
-                          <a
-                            key={idx}
-                            href={blog.url}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="flex items-center p-4 bg-gradient-to-r from-green-50 to-emerald-50 border-2 border-green-200 rounded-xl hover:from-green-100 hover:to-emerald-100 hover:border-green-300 transition-all duration-300 group transform hover:scale-105 shadow-md hover:shadow-lg"
-                          >
-                            <div className="flex-shrink-0 mr-4">
-                              <svg className="w-6 h-6 text-green-600 group-hover:animate-bounce" fill="currentColor" viewBox="0 0 20 20">
-                                <path d="M9 4.804A7.968 7.968 0 005.5 4c-1.255 0-2.443.29-3.5.804v10A7.969 7.969 0 015.5 14c1.669 0 3.218.51 4.5 1.385A7.962 7.962 0 0114.5 14c1.255 0 2.443.29 3.5.804v-10A7.968 7.968 0 0014.5 4c-1.255 0-2.443.29-3.5.804V12a1 1 0 11-2 0V4.804z" />
-                              </svg>
-                            </div>
-                            <span className="text-green-800 font-semibold group-hover:text-green-900 flex-1">
-                              {blog.title}
+                      <div className="mb-6">
+                        <h4 className="text-lg font-semibold text-white mb-4 flex items-center">
+                          <i className="fas fa-star text-yellow-400 mr-2"></i>
+                          Key Achievements
+                        </h4>
+                        <ul className="space-y-3">
+                          {exp.achievements.map((achievement, achIndex) => (
+                            <li key={achIndex} className="flex items-start">
+                              <div className="w-2 h-2 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full mt-2 mr-4 flex-shrink-0"></div>
+                              <span className="text-gray-300 leading-relaxed">{achievement}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+
+                      <div>
+                        <h4 className="text-sm font-semibold text-white mb-3 flex items-center">
+                          <i className="fas fa-tools text-gray-400 mr-2"></i>
+                          Technologies & Skills
+                        </h4>
+                        <div className="flex flex-wrap gap-2">
+                          {exp.technologies.map((tech, techIndex) => (
+                            <span
+                              key={techIndex}
+                              className="px-3 py-1 bg-gradient-to-r from-gray-700 to-gray-600 text-gray-300 text-sm rounded-full font-medium hover:from-blue-600 hover:to-purple-600 hover:text-white transition-all duration-300"
+                            >
+                              {tech}
                             </span>
-                            <svg className="w-5 h-5 text-green-500 ml-3 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" fill="currentColor" viewBox="0 0 20 20">
-                              <path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z" />
-                              <path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z" />
-                            </svg>
-                          </a>
-                        ))}
+                          ))}
+                        </div>
                       </div>
                     </div>
-                  )}
+                  </div>
                 </div>
               </div>
             </div>
           ))}
         </div>
 
-        {/* Summary Stats */}
-        <div className="mt-20 bg-gray-50 rounded-2xl p-10 border border-gray-200 shadow-lg">
-          <h3 className="text-2xl font-bold text-center mb-8 text-gray-900">
-            Career Highlights
-          </h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-            <div className="group hover:shadow-lg transition-shadow duration-300">
-              <div className="bg-white rounded-2xl p-6 shadow-md border border-gray-200">
-                <h3 className="text-4xl font-bold text-blue-600 mb-3">
-                  {getExperience()}
-                </h3>
-                <p className="text-gray-700 font-semibold">Total Experience</p>
-                <div className="w-16 h-1 bg-blue-400 mx-auto mt-3 rounded-full"></div>
+        {/* Case Studies Section */}
+        <div className="mt-20">
+          <div className="text-center mb-12">
+            <h3 className="text-2xl sm:text-3xl font-bold text-white mb-4">
+              Strategic Case Studies
+            </h3>
+            <div className="w-16 h-1 bg-gradient-to-r from-blue-400 to-purple-400 mx-auto rounded-full"></div>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {caseStudies.map((study, index) => (
+              <div key={index} className="bg-gray-800 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 border border-gray-700">
+                <h4 className="text-lg font-bold text-white mb-4">{study.title}</h4>
+                <div className="space-y-4">
+                  <div>
+                    <span className="text-sm font-semibold text-red-400">Challenge:</span>
+                    <p className="text-gray-300 text-sm mt-1">{study.challenge}</p>
+                  </div>
+                  <div>
+                    <span className="text-sm font-semibold text-blue-400">Action:</span>
+                    <p className="text-gray-300 text-sm mt-1">{study.action}</p>
+                  </div>
+                  <div>
+                    <span className="text-sm font-semibold text-green-400">Impact:</span>
+                    <p className="text-gray-300 text-sm mt-1">{study.impact}</p>
+                  </div>
+                </div>
               </div>
-            </div>
-            <div className="group hover:shadow-lg transition-shadow duration-300">
-              <div className="bg-white rounded-2xl p-6 shadow-md border border-gray-200">
-                <h3 className="text-4xl font-bold text-green-600 mb-3">4</h3>
-                <p className="text-gray-700 font-semibold">Companies Worked</p>
-                <div className="w-16 h-1 bg-green-400 mx-auto mt-3 rounded-full"></div>
-              </div>
-            </div>
-            <div className="group hover:shadow-lg transition-shadow duration-300">
-              <div className="bg-white rounded-2xl p-6 shadow-md border border-gray-200">
-                <h3 className="text-4xl font-bold text-orange-600 mb-3">10+</h3>
-                <p className="text-gray-700 font-semibold">Team Members Led</p>
-                <div className="w-16 h-1 bg-orange-400 mx-auto mt-3 rounded-full"></div>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </div>

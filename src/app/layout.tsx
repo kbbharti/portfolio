@@ -6,8 +6,8 @@ import Navbar from "@/components/Navbar";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Rajesh Dhanda - ML Platform Engineer",
-  description: "ML Platform Engineer & AI Systems Architect with 4+ years of experience",
+  title: "Khushbu Bharti - Corporate Communications & Marketing Specialist",
+  description: "Corporate Communications & Marketing Specialist with 5+ years of experience in strategic communications, employer branding, and performance-driven campaigns",
 };
 
 export default function RootLayout({
@@ -20,7 +20,7 @@ export default function RootLayout({
       <head>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
       </head>
-      <body className={inter.className}>
+      <body className={`${inter.className} bg-black text-white`}>
         <Navbar />
         {children}
       </body>

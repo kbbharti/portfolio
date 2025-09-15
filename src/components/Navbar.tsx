@@ -7,12 +7,12 @@ export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   return (
-    <nav className="fixed top-0 w-full bg-gray-900/95 backdrop-blur-lg border-b border-gray-700 shadow-lg z-50">
+    <nav className="fixed top-0 w-full bg-black/95 backdrop-blur-lg border-b border-gray-800 shadow-lg z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex-shrink-0">
             <Link href="/" className="text-xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent hover:from-blue-300 hover:to-purple-300 transition-all duration-300">
-              Rajesh Dhanda
+              Khushbu Bharti
             </Link>
           </div>
           
@@ -29,9 +29,6 @@ export default function Navbar() {
               </Link>
               <Link href="/#skills" className="text-gray-300 hover:text-blue-400 hover:bg-gray-800 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 transform hover:scale-105">
                 Skills
-              </Link>
-              <Link href="/#competitions" className="text-gray-300 hover:text-blue-400 hover:bg-gray-800 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 transform hover:scale-105">
-                Competitions
               </Link>
               <Link href="/#projects" className="text-gray-300 hover:text-blue-400 hover:bg-gray-800 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 transform hover:scale-105">
                 Projects
@@ -70,7 +67,7 @@ export default function Navbar() {
       {/* Mobile menu */}
       {isMenuOpen && (
         <div className="md:hidden">
-          <div className="px-4 pt-4 pb-6 space-y-2 bg-gray-900/95 backdrop-blur-lg border-t border-gray-700 shadow-lg">
+          <div className="px-4 pt-4 pb-6 space-y-2 bg-black/95 backdrop-blur-lg border-t border-gray-800 shadow-lg">
             <Link href="/" className="text-gray-300 hover:text-blue-400 hover:bg-gray-800 block px-4 py-3 rounded-lg text-base font-medium transition-all duration-200">
               Home
             </Link>
@@ -82,9 +79,6 @@ export default function Navbar() {
             </Link>
             <Link href="/#skills" className="text-gray-300 hover:text-blue-400 hover:bg-gray-800 block px-4 py-3 rounded-lg text-base font-medium transition-all duration-200">
               Skills
-            </Link>
-            <Link href="/#competitions" className="text-gray-300 hover:text-blue-400 hover:bg-gray-800 block px-4 py-3 rounded-lg text-base font-medium transition-all duration-200">
-              Competitions
             </Link>
             <Link href="/#projects" className="text-gray-300 hover:text-blue-400 hover:bg-gray-800 block px-4 py-3 rounded-lg text-base font-medium transition-all duration-200">
               Projects
