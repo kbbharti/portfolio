@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import { getAssetPath } from '../utils/assets'
 
 export default function About() {
   return (
@@ -23,7 +24,7 @@ export default function About() {
               <div className="text-center">
                 <div className="w-20 h-20 mx-auto mb-4 flex items-center justify-center bg-gray-700 rounded-lg shadow-lg p-3">
                   <Image 
-                    src="/Power_BI_Logo.svg.png" 
+                    src={getAssetPath("/Power_BI_Logo.svg.png")} 
                     alt="Power BI" 
                     width={48} 
                     height={48}
@@ -35,7 +36,7 @@ export default function About() {
               <div className="text-center">
                 <div className="w-20 h-20 mx-auto mb-4 flex items-center justify-center bg-gray-700 rounded-lg shadow-lg p-3">
                   <Image 
-                    src="/Microsoft_Office_Excel.svg" 
+                    src={getAssetPath("/Microsoft_Office_Excel.svg")} 
                     alt="Excel" 
                     width={48} 
                     height={48}
@@ -47,7 +48,7 @@ export default function About() {
               <div className="text-center">
                 <div className="w-20 h-20 mx-auto mb-4 flex items-center justify-center bg-gray-700 rounded-lg shadow-lg p-3">
                   <Image 
-                    src="/tableau.svg" 
+                    src={getAssetPath("/tableau.svg")} 
                     alt="Tableau" 
                     width={48} 
                     height={48}
@@ -59,7 +60,7 @@ export default function About() {
               <div className="text-center">
                 <div className="w-20 h-20 mx-auto mb-4 flex items-center justify-center bg-gray-700 rounded-lg shadow-lg p-3">
                   <Image 
-                    src="/HubSpot_Logo.svg" 
+                    src={getAssetPath("/HubSpot_Logo.svg")} 
                     alt="HubSpot" 
                     width={48} 
                     height={48}
@@ -71,7 +72,7 @@ export default function About() {
               <div className="text-center">
                 <div className="w-20 h-20 mx-auto mb-4 flex items-center justify-center bg-gray-700 rounded-lg shadow-lg p-3">
                   <Image 
-                    src="/Logo_Google_Analytics.svg" 
+                    src={getAssetPath("/Logo_Google_Analytics.svg")} 
                     alt="Google Analytics" 
                     width={48} 
                     height={48}
@@ -83,7 +84,7 @@ export default function About() {
               <div className="text-center">
                 <div className="w-20 h-20 mx-auto mb-4 flex items-center justify-center bg-gray-700 rounded-lg shadow-lg p-3">
                   <Image 
-                    src="/Microsoft_Office_PowerPoint.svg" 
+                    src={getAssetPath("/Microsoft_Office_PowerPoint.svg")} 
                     alt="PowerPoint" 
                     width={48} 
                     height={48}
