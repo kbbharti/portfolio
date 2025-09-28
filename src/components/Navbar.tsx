@@ -36,7 +36,7 @@ export default function Navbar() {
               <Link href="/#education" className="text-gray-300 hover:text-blue-400 hover:bg-gray-800 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 transform hover:scale-105">
                 Education
               </Link>
-              <Link href="https://drive.google.com/file/d/1rKgBAFzYi0WNvGAGq2fDO7Rn3BI-jsYL/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-blue-400 hover:bg-gray-800 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 transform hover:scale-105">
+              <Link href="https://drive.google.com/file/d/1wlllnCr9beP4eH62b5dFyqKzlblQD9LR/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-blue-400 hover:bg-gray-800 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 transform hover:scale-105">
                 Resume
               </Link>
               {/* <Link href="/bucket-list" className="text-gray-300 hover:text-blue-400 hover:bg-gray-800 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 transform hover:scale-105">
