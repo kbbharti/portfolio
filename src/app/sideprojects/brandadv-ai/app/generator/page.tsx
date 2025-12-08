@@ -96,7 +96,7 @@ export default function ContentGenerator() {
     await new Promise(resolve => setTimeout(resolve, 2000))
 
     // Mock generated content based on type
-    const mockContent: Record<ContentType, any> = {
+    const mockContent: Record<ContentType, { title: string; content: string; hashtags: string[]; cta: string; hasPreview?: boolean }> = {
       'hiring': {
         title: '🚀 We\'re Hiring: Join Our Growing Team!',
         content: `Exciting news! We're looking for a talented professional to join our team.\n\n${inputText}\n\nWhat we offer:\n✨ Competitive salary and benefits\n🌟 Professional growth opportunities\n💼 Flexible work environment\n🎯 Impact-driven projects\n\nReady to make a difference? We'd love to hear from you!`,
@@ -323,7 +323,7 @@ export default function ContentGenerator() {
                         </div>
                         <div className="space-y-3">
                           <div className="text-4xl">🎯</div>
-                          <h2 className="text-3xl font-bold text-gray-900">WE'RE HIRING!</h2>
+                          <h2 className="text-3xl font-bold text-gray-900">WE&apos;RE HIRING!</h2>
                           <p className="text-xl font-semibold text-blue-600">
                             {inputText.split('\n')[0] || 'Position Title'}
                           </p>

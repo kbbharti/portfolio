@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { History, Calendar, ArrowRight, Trash2, Search, FileText } from 'lucide-react';
+import { History, Calendar, Trash2, FileText } from 'lucide-react';
 import { HistoryItem } from '../types';
 
 interface HistoryViewProps {

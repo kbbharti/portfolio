@@ -189,6 +189,7 @@ export default function Experience() {
     }
   ]
 
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const caseStudies = [
     {
       title: "Employer Branding at Computacenter",
@@ -272,6 +273,7 @@ export default function Experience() {
                       Key Achievements
                     </h4>
                     <div className="space-y-5">
+                      {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
                       {exp.achievements.map((achievement: any, idx: number) => (
                         <div key={idx}>
                           {typeof achievement === 'object' && achievement.title ? (
@@ -348,6 +350,7 @@ export default function Experience() {
                       )}
                       {exp.caseStudies && (
                         <div className="space-y-4">
+                          {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
                           {exp.caseStudies.map((study: any, studyIndex: number) => (
                             <a 
                               key={studyIndex}

@@ -184,7 +184,7 @@ export default function AmazonSaleEventPlannerCaseStudy() {
             Back to Experience
           </Link>
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
-            Accelerating Adoption & Revenue Growth for Amazon's Sale Event Planner
+            Accelerating Adoption & Revenue Growth for Amazon&apos;s Sale Event Planner
           </h1>
           <p className="text-xl text-gray-700 mb-6">
             Product Marketing: B2B SaaS Tool | Event Participation & Deal Activation Platform
@@ -217,10 +217,10 @@ export default function AmazonSaleEventPlannerCaseStudy() {
             Executive Summary
           </h2>
           <p className="text-gray-700 text-lg leading-relaxed mb-6">
-            The <strong className="text-gray-900">Sale Event Planner (SEP)</strong> is Amazon's internal B2B tool designed to streamline seller discovery, planning, and enrollment in marketplace deal events. As deals represent one of the strongest revenue levers on Amazon, maximizing seller participation directly impacts event performance, competitive selection depth, and overall Gross Merchandise Sales (GMS).
+            The <strong className="text-gray-900">Sale Event Planner (SEP)</strong> is Amazon&apos;s internal B2B tool designed to streamline seller discovery, planning, and enrollment in marketplace deal events. As deals represent one of the strongest revenue levers on Amazon, maximizing seller participation directly impacts event performance, competitive selection depth, and overall Gross Merchandise Sales (GMS).
           </p>
           <p className="text-gray-700 text-lg leading-relaxed mb-6">
-            I owned the <strong className="text-gray-900">complete user acquisition and activation strategy for SEP</strong>, orchestrating integrated marketing campaigns, behavioral engagement programs, cross-category partnerships, and seller enablement initiatives. My product marketing efforts delivered measurable improvements in tool adoption rates, event enrollment velocity, deal pipeline quality, and revenue contribution across Amazon's India marketplace.
+            I owned the <strong className="text-gray-900">complete user acquisition and activation strategy for SEP</strong>, orchestrating integrated marketing campaigns, behavioral engagement programs, cross-category partnerships, and seller enablement initiatives. My product marketing efforts delivered measurable improvements in tool adoption rates, event enrollment velocity, deal pipeline quality, and revenue contribution across Amazon&apos;s India marketplace.
           </p>
           <div className="bg-gradient-to-r from-indigo-50 to-blue-50 rounded-xl p-6 border border-indigo-200">
             <p className="text-gray-900 text-lg font-semibold">
@@ -690,7 +690,7 @@ export default function AmazonSaleEventPlannerCaseStudy() {
               <div className="bg-white rounded-lg p-6 border border-purple-200 mb-4">
                 <h4 className="font-semibold text-gray-900 mb-2">Core Positioning Statement:</h4>
                 <p className="text-gray-700 text-lg font-medium italic">
-                  "The fastest path from opportunity discovery to revenue growth - helping sellers win during Amazon's biggest sale events"
+                  &quot;The fastest path from opportunity discovery to revenue growth - helping sellers win during Amazon&apos;s biggest sale events&quot;
                 </p>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">

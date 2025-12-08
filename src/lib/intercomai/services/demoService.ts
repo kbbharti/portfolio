@@ -242,6 +242,7 @@ const generateDemoContent = (rawText: string, settings: GenerationSettings): Gen
   };
 };
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const generateDemoCompliance = (content: string, tone: string): ComplianceResult => {
   const hasAbsoluteLanguage = content.toLowerCase().includes('promise') || content.toLowerCase().includes('guarantee');
   const hasUrgentTone = content.includes('🚨') || content.toLowerCase().includes('immediate');

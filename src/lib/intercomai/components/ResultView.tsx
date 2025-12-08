@@ -120,6 +120,7 @@ export const ResultView: React.FC<ResultViewProps> = ({
           <div className="prose prose-slate prose-lg max-w-none p-8 border-2 border-slate-200 rounded-xl bg-white shadow-md">
             <ReactMarkdown 
               components={{
+                /* eslint-disable @typescript-eslint/no-unused-vars */
                 h1: ({node, ...props}) => <h1 className="text-2xl font-bold text-slate-900 mb-4 pb-2 border-b-2 border-slate-200" {...props} />,
                 h2: ({node, ...props}) => <h2 className="text-xl font-bold text-slate-800 mt-6 mb-3" {...props} />,
                 h3: ({node, ...props}) => <h3 className="text-lg font-semibold text-slate-700 mt-4 mb-2" {...props} />,
@@ -131,6 +132,7 @@ export const ResultView: React.FC<ResultViewProps> = ({
                 em: ({node, ...props}) => <em className="italic text-slate-600" {...props} />,
                 hr: ({node, ...props}) => <hr className="my-6 border-t-2 border-slate-200" {...props} />,
                 blockquote: ({node, ...props}) => <blockquote className="border-l-4 border-indigo-500 pl-4 italic text-slate-600 my-4" {...props} />,
+                /* eslint-enable @typescript-eslint/no-unused-vars */
               }}
             >{data.content}</ReactMarkdown>
           </div>
@@ -222,7 +224,7 @@ export const ResultView: React.FC<ResultViewProps> = ({
                   <h4 className="text-xs font-bold uppercase tracking-wider text-slate-500 mb-2">Detected Issues</h4>
                   {complianceState.data.issues.map((issue, idx) => (
                     <div key={idx} className="text-sm border-l-2 pl-3 py-1 border-slate-300">
-                      <p className="font-semibold text-slate-800">"{issue.phrase}"</p>
+                      <p className="font-semibold text-slate-800">&quot;{issue.phrase}&quot;</p>
                       <p className="text-slate-600 text-xs mb-1">{issue.reason}</p>
                       <p className="text-indigo-600 text-xs font-medium">Suggestion: {issue.suggestion}</p>
                     </div>

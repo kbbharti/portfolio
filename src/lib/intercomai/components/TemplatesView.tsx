@@ -1,7 +1,7 @@
 
 import React from 'react';
-import { LayoutTemplate, ArrowRight, ShieldAlert, PartyPopper, Briefcase, Megaphone, Users, Calendar } from 'lucide-react';
-import { GenerationSettings, Tone, Format, Language, Template } from '../types';
+import { LayoutTemplate, ArrowRight, ShieldAlert, PartyPopper, Briefcase, Megaphone, Users } from 'lucide-react';
+import { Template, Tone, Format, Language } from '../types';
 
 interface TemplatesViewProps {
   onSelect: (template: Template) => void;
@@ -88,7 +88,7 @@ export const TemplatesView: React.FC<TemplatesViewProps> = ({ onSelect }) => {
       <div className="text-center max-w-2xl mx-auto">
         <h2 className="text-3xl font-bold text-slate-900 mb-4">Choose a Template</h2>
         <p className="text-slate-600">
-          Start with a pre-configured scenario to save time. We've set the optimal tone and format for common internal communications.
+          Start with a pre-configured scenario to save time. We&apos;ve set the optimal tone and format for common internal communications.
         </p>
       </div>
 

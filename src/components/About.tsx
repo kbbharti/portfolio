@@ -13,7 +13,7 @@ export default function About() {
           <div className="lg:col-span-3">
             <div className="bg-white p-8 rounded-xl shadow-lg border-2 border-blue-200">
               <p className="text-lg text-gray-600 leading-relaxed">
-                I'm a Marketing & Communications Specialist with 6+ years of experience driving product adoption, strengthening employer brands, and leading large-scale internal and external communication strategies. I combine storytelling, data, and cross-functional collaboration to launch high-impact programs, shape brand perception, and enable teams to deliver measurable business outcomes. My work spans GTM strategy, program & product marketing, employer branding, PR, and analytics bringing a holistic approach to how products communicate, grow, and build trust with users.
+                I&apos;m a Marketing & Communications Specialist with 6+ years of experience driving product adoption, strengthening employer brands, and leading large-scale internal and external communication strategies. I combine storytelling, data, and cross-functional collaboration to launch high-impact programs, shape brand perception, and enable teams to deliver measurable business outcomes. My work spans GTM strategy, program & product marketing, employer branding, PR, and analytics bringing a holistic approach to how products communicate, grow, and build trust with users.
               </p>
             </div>
           </div>

@@ -193,7 +193,7 @@ export default function ComputacenterEVPCaseStudy() {
             Executive Summary
           </h2>
           <p className="text-gray-700 text-lg leading-relaxed mb-6">
-            In today's competitive technology services landscape, attracting and retaining top talent requires a 
+            In today&apos;s competitive technology services landscape, attracting and retaining top talent requires a 
             differentiated, authentic employer brand. As Marketing & Communications Specialist, I developed a 
             <strong className="text-gray-900">6-pillar EVP framework</strong> grounded in competitive analysis, 
             market intelligence, and predictive talent trends.
@@ -535,7 +535,7 @@ export default function ComputacenterEVPCaseStudy() {
             Competitive Differentiation Analysis
           </h2>
           <p className="text-center text-gray-700 mb-8 max-w-3xl mx-auto">
-            Comprehensive analysis of key competitors' EVP positioning to identify differentiation opportunities for Computacenter
+            Comprehensive analysis of key competitors&apos; EVP positioning to identify differentiation opportunities for Computacenter
           </p>
           <div className="space-y-4">
             {competitiveInsights.map((insight, index) => (
@@ -554,7 +554,7 @@ export default function ComputacenterEVPCaseStudy() {
                     <p className="text-gray-700">{insight.positioning}</p>
                   </div>
                   <div>
-                    <h4 className="text-sm font-semibold text-gray-500 mb-2">Computacenter's Differentiation</h4>
+                    <h4 className="text-sm font-semibold text-gray-500 mb-2">Computacenter&apos;s Differentiation</h4>
                     <p className="text-blue-600 font-semibold">{insight.differentiation}</p>
                   </div>
                 </div>
@@ -565,7 +565,7 @@ export default function ComputacenterEVPCaseStudy() {
           <div className="mt-8 bg-gradient-to-br from-green-50 to-blue-50 rounded-xl p-8 border border-green-200">
             <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center">
               <i className="fas fa-trophy text-green-600 mr-3"></i>
-              Computacenter's Core Differentiation
+              Computacenter&apos;s Core Differentiation
             </h3>
             <p className="text-gray-700 text-lg font-medium">
               Human-centered technology impact + Sustainable career development + Authentic flexibility

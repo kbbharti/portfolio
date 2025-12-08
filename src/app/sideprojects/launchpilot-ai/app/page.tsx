@@ -1336,7 +1336,7 @@ No credit card required • 14-day trial • Cancel anytime
                         <i className="fas fa-magic text-blue-600 text-xl mt-0.5"></i>
                         <div className="text-sm text-gray-700">
                           <p className="font-semibold text-gray-900 mb-1">✨ Demo Data Pre-filled</p>
-                          <p>All fields contain sample data. Click "Generate" to see results instantly, or edit any field to personalize your content.</p>
+                          <p>All fields contain sample data. Click &quot;Generate&quot; to see results instantly, or edit any field to personalize your content.</p>
                         </div>
                       </div>
                     </div>

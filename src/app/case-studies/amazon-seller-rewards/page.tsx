@@ -143,7 +143,7 @@ export default function AmazonSellerRewardsCaseStudy() {
             Back to Experience
           </Link>
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
-            Driving Adoption & Engagement for Amazon's Seller Rewards Program
+            Driving Adoption & Engagement for Amazon&apos;s Seller Rewards Program
           </h1>
           <p className="text-xl text-gray-700 mb-6">
             Product Marketing Strategy: B2B SaaS Product Marketing & Seller Retention
@@ -173,10 +173,10 @@ export default function AmazonSellerRewardsCaseStudy() {
             Executive Summary
           </h2>
           <p className="text-gray-700 text-lg leading-relaxed mb-6">
-            Amazon's <strong className="text-gray-900">Seller Rewards Program (SRP)</strong> is a B2B product marketing initiative designed to drive product adoption, boost seller retention, and increase engagement with Amazon's marketplace platform. As a product-led growth strategy, SRP incentivizes sellers to adopt key features such as FBA (Fulfillment by Amazon), inventory expansion, and unique product selection through rewards and benefits.
+            Amazon&apos;s <strong className="text-gray-900">Seller Rewards Program (SRP)</strong> is a B2B product marketing initiative designed to drive product adoption, boost seller retention, and increase engagement with Amazon&apos;s marketplace platform. As a product-led growth strategy, SRP incentivizes sellers to adopt key features such as FBA (Fulfillment by Amazon), inventory expansion, and unique product selection through rewards and benefits.
           </p>
           <p className="text-gray-700 text-lg leading-relaxed mb-6">
-            As the <strong className="text-gray-900">Product Marketing Specialist</strong> driving SRP's go-to-market strategy and product adoption campaigns post-launch, I led multi-channel product marketing, customer lifecycle marketing, positioning and messaging, data-driven optimization, and cross-functional GTM execution. My work contributed to significant improvements in product adoption rates, user activation, feature utilization, and customer retention across India's seller marketplace, particularly during high-impact events like Great Indian Festival and Prime Day.
+            As the <strong className="text-gray-900">Product Marketing Specialist</strong> driving SRP&apos;s go-to-market strategy and product adoption campaigns post-launch, I led multi-channel product marketing, customer lifecycle marketing, positioning and messaging, data-driven optimization, and cross-functional GTM execution. My work contributed to significant improvements in product adoption rates, user activation, feature utilization, and customer retention across India&apos;s seller marketplace, particularly during high-impact events like Great Indian Festival and Prime Day.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl p-6 border border-blue-200">
@@ -295,7 +295,7 @@ export default function AmazonSellerRewardsCaseStudy() {
               <div className="bg-gradient-to-br from-green-50 to-blue-50 rounded-lg p-4 border border-green-200">
                 <h5 className="font-semibold text-gray-900 mb-2">Core Value Proposition:</h5>
                 <p className="text-gray-700 font-medium italic">
-                  "Grow your business faster with Amazon - earn rewards for every milestone you achieve"
+                  &quot;Grow your business faster with Amazon - earn rewards for every milestone you achieve&quot;
                 </p>
               </div>
             </div>
@@ -576,7 +576,7 @@ export default function AmazonSellerRewardsCaseStudy() {
               <div className="bg-white rounded-lg p-6 border border-purple-200 mb-4">
                 <h4 className="font-semibold text-gray-900 mb-2">Core Value Proposition:</h4>
                 <p className="text-gray-700 text-lg font-medium italic">
-                  "Grow your business faster with Amazon - earn rewards for every milestone you achieve"
+                  &quot;Grow your business faster with Amazon - earn rewards for every milestone you achieve&quot;
                 </p>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">

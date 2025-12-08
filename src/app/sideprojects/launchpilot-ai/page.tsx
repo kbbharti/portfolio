@@ -45,6 +45,7 @@ export default function LaunchPilotAIProject() {
     }
   ]
 
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const advancedFeatures = [
     { title: "Competitive Positioning Analysis", icon: "fa-chart-line", description: "AI-powered competitive landscape analysis and differentiation strategy" },
     { title: "Full Launch Deck Creation", icon: "fa-presentation", description: "Generate complete launch presentations with PPT export capability" },
@@ -198,7 +199,7 @@ export default function LaunchPilotAIProject() {
                     </h3>
                     <p className="text-gray-700">
                       An interactive dashboard with 6 launch generators, each pre-loaded with realistic demo data. 
-                      Users can immediately click "Generate" to see professional output, or edit the sample data 
+                      Users can immediately click &quot;Generate&quot; to see professional output, or edit the sample data 
                       to explore personalized results. Every generator includes comprehensive templates and best 
                       practices used by successful product marketing teams.
                     </p>
@@ -316,7 +317,7 @@ export default function LaunchPilotAIProject() {
                     <i className="fas fa-magic text-2xl text-purple-600"></i>
                   </div>
                   <h3 className="text-lg font-bold text-gray-900 mb-2">Pre-filled Demo Data</h3>
-                  <p className="text-gray-600 text-sm">All generators start with realistic sample data for an "AI-Powered Analytics Dashboard" product. Users can generate content immediately or customize fields for personalized results.</p>
+                  <p className="text-gray-600 text-sm">All generators start with realistic sample data for an &quot;AI-Powered Analytics Dashboard&quot; product. Users can generate content immediately or customize fields for personalized results.</p>
                 </div>
                 <div className="bg-gradient-to-br from-blue-50 to-indigo-50 p-6 rounded-xl shadow-md border border-blue-200">
                   <div className="bg-white p-3 rounded-lg w-12 h-12 flex items-center justify-center mb-4">
