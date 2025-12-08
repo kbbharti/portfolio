@@ -10,7 +10,7 @@ export default function Skills() {
       title: "Marketing & Campaigns",
       icon: "🚀",
       description: "Multi-channel marketing and campaign management",
-      skills: ["Program Marketing", "Performance Marketing", "Campaign Management", "Content Marketing", "Social Media Strategy"]
+      skills: ["Go-to-market Strategy", "Product Positioning & Messaging", "Product Pricing", "Program Marketing", "Performance Marketing", "Campaign Management"]
     },
     {
       title: "Data Analytics & Tools",
@@ -27,13 +27,13 @@ export default function Skills() {
   ]
 
   return (
-    <section id="skills" className="py-20 bg-black">
-      <div className="max-w-[90rem] mx-auto px-6 sm:px-8 lg:px-12">
+    <section id="skills" className="py-20 bg-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
+          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
             Areas of Expertise
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Comprehensive expertise in communications strategy, marketing execution, and data-driven decision making
           </p>
         </div>
@@ -42,27 +42,29 @@ export default function Skills() {
           {skillCategories.map((category, index) => (
             <div 
               key={index} 
-              className="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border-2 border-gray-700 hover:border-blue-400"
+              className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200"
             >
               <div className="flex items-start mb-6">
-                <span className="text-3xl text-blue-400 mr-4">
-                  {category.icon}
-                </span>
-                <div>
-                  <h3 className="text-xl font-bold text-white mb-2">
+                <div className="w-14 h-14 bg-blue-100 rounded-lg flex items-center justify-center">
+                  <span className="text-2xl">
+                    {category.icon}
+                  </span>
+                </div>
+                <div className="ml-4 flex-1">
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">
                     {category.title}
                   </h3>
-                  <p className="text-gray-400 text-sm">
+                  <p className="text-gray-600 text-sm">
                     {category.description}
                   </p>
                 </div>
               </div>
               
-              <div className="flex flex-wrap gap-3">
+              <div className="flex flex-wrap gap-2">
                 {category.skills.map((skill, skillIndex) => (
                   <span 
                     key={skillIndex}
-                    className="bg-gray-700 text-gray-300 hover:bg-blue-600 hover:text-white px-4 py-2 rounded-lg text-sm font-semibold transition-colors duration-200 shadow-sm hover:shadow-md"
+                    className="bg-gray-100 text-gray-700 px-3 py-1.5 rounded-full text-sm font-medium"
                   >
                     {skill}
                   </span>

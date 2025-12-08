@@ -23,72 +23,72 @@ Best regards,
   }
   
   return (
-    <section id="contact" className="py-20 bg-gray-800">
+    <section id="contact" className="py-20 bg-slate-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl sm:text-4xl font-bold text-center text-white mb-16">
+        <h2 className="text-3xl sm:text-4xl font-bold text-center text-gray-900 mb-16">
           Get In Touch
         </h2>
         
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
-            <p className="text-xl text-gray-300 leading-relaxed max-w-3xl mx-auto">
+            <p className="text-xl text-gray-700 leading-relaxed max-w-3xl mx-auto">
               Ready to elevate your brand&apos;s story? I&apos;m passionate about collaborating on innovative marketing campaigns, 
               building compelling communications strategies, and solving complex brand challenges. Let&apos;s create impactful narratives together.
             </p>
           </div>
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            <div className="bg-gradient-to-r from-gray-700 to-gray-600 p-8 rounded-xl shadow-xl border border-gray-600">
-              <h3 className="text-2xl font-bold text-white mb-6 flex items-center">
-                <i className="fas fa-address-card text-blue-400 mr-3"></i>
+            <div className="bg-gradient-to-r from-white to-blue-50 p-8 rounded-xl shadow-xl border border-blue-100">
+              <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+                <i className="fas fa-address-card text-blue-600 mr-3"></i>
                 Contact Information
               </h3>
               <div className="mb-8 space-y-4">
-                <div className="flex items-center p-4 bg-gray-800 rounded-lg shadow-sm">
-                  <div className="w-12 h-12 bg-gray-700 rounded-full flex items-center justify-center mr-4">
-                    <i className="fas fa-envelope text-blue-400"></i>
+                <div className="flex items-center p-4 bg-white rounded-lg shadow-sm">
+                  <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                    <i className="fas fa-envelope text-blue-600"></i>
                   </div>
                   <div>
-                    <p className="text-sm text-gray-400 font-medium">Email</p>
-                    <span className="text-gray-200 font-semibold text-sm">Khushbubharti.05@gmail.com</span>
+                    <p className="text-sm text-gray-500 font-medium">Email</p>
+                    <span className="text-gray-800 font-semibold text-sm">Khushbubharti.05@gmail.com</span>
                   </div>
                 </div>
-                <div className="flex items-center p-4 bg-gray-800 rounded-lg shadow-sm">
-                  <div className="w-12 h-12 bg-gray-700 rounded-full flex items-center justify-center mr-4">
-                    <i className="fas fa-map-marker-alt text-green-400"></i>
+                <div className="flex items-center p-4 bg-white rounded-lg shadow-sm">
+                  <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mr-4">
+                    <i className="fas fa-map-marker-alt text-green-600"></i>
                   </div>
                   <div>
-                    <p className="text-sm text-gray-400 font-medium">Location</p>
-                    <span className="text-gray-200 font-semibold">Bengaluru, India</span>
+                    <p className="text-sm text-gray-500 font-medium">Location</p>
+                    <span className="text-gray-800 font-semibold">Bengaluru, India</span>
                   </div>
                 </div>
               </div>
               
               <div>
-                <h4 className="text-lg font-bold text-white mb-4 flex items-center">
-                  <i className="fas fa-share-alt text-purple-400 mr-2"></i>
+                <h4 className="text-lg font-bold text-gray-900 mb-4 flex items-center">
+                  <i className="fas fa-share-alt text-purple-600 mr-2"></i>
                   Let&apos;s Connect
                 </h4>
-                <a href="https://www.linkedin.com/in/khushbu-bharti-1a4161200" target="_blank" rel="noopener noreferrer" className="flex items-center p-4 bg-gray-800 rounded-lg shadow-sm hover:shadow-lg transition-all duration-300 border border-gray-600 hover:border-blue-400">
-                  <div className="w-12 h-12 bg-gray-700 rounded-full flex items-center justify-center mr-4 group-hover:bg-blue-600 transition-colors">
-                    <i className="fab fa-linkedin text-blue-400 group-hover:text-white"></i>
+                <a href="https://www.linkedin.com/in/khushbu-bharti-1a4161200" target="_blank" rel="noopener noreferrer" className="group flex items-center p-4 bg-white rounded-lg shadow-sm hover:shadow-lg transition-all duration-300 border border-gray-100 hover:border-blue-300">
+                  <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4 group-hover:bg-blue-600 transition-colors">
+                    <i className="fab fa-linkedin text-blue-600 text-lg group-hover:text-white"></i>
                   </div>
                   <div>
-                    <p className="text-sm text-gray-400 font-medium">LinkedIn</p>
-                    <span className="text-gray-200 font-semibold text-sm">Connect with me</span>
+                    <p className="text-sm text-gray-500 font-medium">LinkedIn</p>
+                    <span className="text-gray-800 font-semibold text-sm">Connect with me</span>
                   </div>
                 </a>
               </div>
             </div>
             
-            <div className="bg-gradient-to-r from-gray-700 to-gray-600 p-8 rounded-xl shadow-xl border border-gray-600">
-              <h3 className="text-2xl font-bold text-white mb-6 flex items-center">
-                <i className="fas fa-paper-plane text-purple-400 mr-3"></i>
+            <div className="bg-gradient-to-r from-white to-purple-50 p-8 rounded-xl shadow-xl border border-purple-100">
+              <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+                <i className="fas fa-paper-plane text-purple-600 mr-3"></i>
                 Start a Conversation
               </h3>
               
               <div className="mb-6">
-                <p className="text-gray-300 leading-relaxed">
+                <p className="text-gray-700 leading-relaxed">
                   Choose your preferred discussion topic and I&apos;ll help you craft the perfect message. 
                   Each option opens Gmail with a professionally structured email template.
                 </p>
@@ -148,9 +148,9 @@ Best regards,
         </div>
       </div>
       
-      <footer className="mt-20 border-t border-gray-600 pt-8">
+      <footer className="mt-20 border-t border-gray-200 pt-8">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <p className="text-gray-400">
+          <p className="text-gray-600">
             &copy; 2025 Khushbu Bharti - Corporate Communications & Marketing Specialist. All rights reserved.
           </p>
         </div>
