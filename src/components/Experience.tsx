@@ -1,6 +1,8 @@
 
 'use client'
 
+import Link from 'next/link'
+
 export default function Experience() {
   // Calculate experience from 2020 to current date
   const getExperience = () => {
@@ -324,10 +326,8 @@ export default function Experience() {
                         {exp.caseStudies ? 'Featured Case Studies' : 'Featured Case Study'}
                       </h4>
                       {exp.caseStudy && (
-                        <a 
+                        <Link 
                           href={exp.caseStudy.link}
-                          target="_blank"
-                          rel="noopener noreferrer"
                           className="block bg-gradient-to-r from-gray-100 to-gray-200 rounded-xl p-6 hover:from-gray-200 hover:to-gray-300 transition-all duration-300 group shadow-lg hover:shadow-xl border border-gray-300"
                         >
                           <div className="flex items-start justify-between">
@@ -346,17 +346,15 @@ export default function Experience() {
                               </div>
                             </div>
                           </div>
-                        </a>
+                        </Link>
                       )}
                       {exp.caseStudies && (
                         <div className="space-y-4">
                           {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
                           {exp.caseStudies.map((study: any, studyIndex: number) => (
-                            <a 
+                            <Link 
                               key={studyIndex}
                               href={study.link}
-                              target="_blank"
-                              rel="noopener noreferrer"
                               className="block bg-gradient-to-r from-gray-100 to-gray-200 rounded-xl p-6 hover:from-gray-200 hover:to-gray-300 transition-all duration-300 group shadow-lg hover:shadow-xl border border-gray-300"
                             >
                               <div className="flex items-start justify-between">
@@ -375,7 +373,7 @@ export default function Experience() {
                                   </div>
                                 </div>
                               </div>
-                            </a>
+                            </Link>
                           ))}
                         </div>
                       )}
