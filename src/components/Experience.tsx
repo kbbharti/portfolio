@@ -394,7 +394,7 @@ export default function Experience() {
             <div className="group hover:shadow-lg transition-shadow duration-300">
               <div className="bg-white rounded-2xl p-6 shadow-md border border-gray-200">
                 <h3 className="text-4xl font-bold text-blue-600 mb-3">
-                  5+ Years
+                  6+ Years
                 </h3>
                 <p className="text-gray-700 font-semibold">Total Experience</p>
                 <div className="w-16 h-1 bg-blue-400 mx-auto mt-3 rounded-full"></div>
