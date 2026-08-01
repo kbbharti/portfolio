@@ -43,12 +43,14 @@ export default function BrandAdvAIApp() {
   const toolRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
-    const savedHistory = localStorage.getItem('brandadv_history')
-    if (savedHistory) {
-      try {
-        setHistory(JSON.parse(savedHistory))
-      } catch (e) {
-        console.error("Failed to parse history", e)
+    if (typeof window !== 'undefined' && window.localStorage?.getItem) {
+      const savedHistory = window.localStorage.getItem('brandadv_history')
+      if (savedHistory) {
+        try {
+          setHistory(JSON.parse(savedHistory))
+        } catch (e) {
+          console.error("Failed to parse history", e)
+        }
       }
     }
   }, [])

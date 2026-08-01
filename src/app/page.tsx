@@ -1,23 +1,12 @@
-import Hero from '@/components/Hero'
-import About from '@/components/About'
-import Experience from '@/components/Experience'
-import Skills from '@/components/Skills'
-import SideProjects from '@/components/SideProjects'
-import Education from '@/components/Education'
-import Projects from '@/components/Projects'
-import Contact from '@/components/Contact'
+import fs from 'fs';
+import path from 'path';
 
 export default function Home() {
+  const filePath = path.join(process.cwd(), 'public', 'khushbu-portfolio-v4-updated.html');
+  const htmlContent = fs.readFileSync(filePath, 'utf8');
+
   return (
-    <main>
-      <Hero />
-      <About />
-      <Experience />
-      <Skills />
-      <SideProjects />
-      <Projects />
-      <Education />
-      <Contact />
-    </main>
-  )
+    <div dangerouslySetInnerHTML={{ __html: htmlContent }} />
+  );
 }
+

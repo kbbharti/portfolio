@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jobs-to-be-Done — How Khushbu Bharti Thinks</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#ffffff; --paper-dim:#f0f0f0; --ink:#151515; --ink-soft:#666666;
+  --accent:#333333; --accent-deep:#000000; --accent-bright:#9a9a9a; --highlight:#e4e4e4; --line:#dcdcdc;
+}
+*{box-sizing:border-box; margin:0; padding:0;}
+html{scroll-behavior:smooth;}
+body{background:var(--paper); color:var(--ink); font-family:'Manrope',sans-serif; font-size:16px; line-height:1.65; -webkit-font-smoothing:antialiased;}
+a{color:inherit;} ::selection{background:var(--accent); color:var(--paper);}
+.wrap{max-width:820px; margin:0 auto; padding:0 32px;}
+h1,h2,h3{font-family:'Newsreader',serif; font-weight:500; letter-spacing:-0.01em; color:var(--ink);}
+.mono{font-family:'JetBrains Mono',monospace;}
+
+nav{position:sticky; top:0; z-index:20; background:rgba(255,255,255,0.9); backdrop-filter:blur(10px); border-bottom:1px solid var(--line);}
+.nav-inner{max-width:820px; margin:0 auto; padding:16px 32px; display:flex; align-items:center; justify-content:space-between;}
+.back-link{font-family:'JetBrains Mono',monospace; font-size:13px; color:var(--ink-soft); text-decoration:none;}
+.back-link:hover{color:var(--ink);}
+.nav-mono{font-family:'Newsreader',serif; font-size:16px; font-weight:600;}
+
+.hero{padding:64px 0 40px;}
+.eyebrow{font-family:'JetBrains Mono',monospace; font-size:12.5px; letter-spacing:0.14em; text-transform:uppercase; color:var(--ink-soft); display:block; margin-bottom:18px;}
+.hero h1{font-size:46px; line-height:1.12; margin-bottom:20px;}
+.hero p.lede{font-size:18px; color:var(--ink-soft); max-width:640px;}
+
+section{padding:44px 0; border-top:1px solid var(--line);}
+section h2{font-size:24px; margin-bottom:16px;}
+section p{font-size:16px; color:#333; margin-bottom:14px; max-width:680px;}
+
+.steps{counter-reset:step; list-style:none; margin-top:8px;}
+.steps li{
+  counter-increment:step; position:relative; padding-left:44px; margin-bottom:18px; font-size:15.5px; color:#333;
+}
+.steps li::before{
+  content:counter(step); position:absolute; left:0; top:-2px; width:28px; height:28px; border-radius:50%;
+  background:var(--ink); color:var(--paper); font-family:'JetBrains Mono',monospace; font-size:13px;
+  display:flex; align-items:center; justify-content:center;
+}
+
+.practice-card{
+  background:var(--paper-dim); border-left:3px solid var(--ink); padding:24px 26px; border-radius:2px 12px 12px 2px; margin-top:8px;
+}
+.practice-card p{color:#222;}
+.result-pill{
+  font-family:'JetBrains Mono',monospace; font-size:13.5px; color:var(--ink); font-weight:600; margin-top:14px;
+  display:inline-block; border:1px solid var(--accent-bright); padding:7px 14px; border-radius:20px;
+}
+
+.cta{background:var(--ink); color:var(--paper); padding:64px 0; text-align:center;}
+.cta h2{color:var(--paper); font-size:28px; margin-bottom:14px;}
+.cta p{color:#cfcfcf; max-width:460px; margin:0 auto 26px;}
+.btn{background:var(--paper); color:var(--ink); text-decoration:none; padding:14px 26px; font-size:14px; font-weight:600; border-radius:30px; display:inline-block;}
+.btn:hover{background:#e4e4e4;}
+
+footer{padding:30px 0; text-align:center; font-family:'JetBrains Mono',monospace; font-size:12px; color:var(--ink-soft);}
+
+@media (max-width:600px){
+  .hero h1{font-size:32px;}
+  .wrap{padding:0 20px;}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <div class="nav-mono">Khushbu Bharti</div>
+    <a class="back-link" href="khushbu-portfolio-v4-updated.html#think">← Back to Portfolio</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <span class="eyebrow">How I Think — Model 01</span>
+    <h1>Jobs-to-be-Done</h1>
+    <p class="lede">What is the audience actually ‘hiring’ a product or program to do — before touching messaging.</p>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <h2>What It Is</h2>
+    <p>Jobs-to-be-Done reframes a product or program not as a bundle of features, but as something an audience ‘hires’ to make progress on a specific job in their life or work. The question isn't ‘what does this do’ — it's ‘what job is someone trying to get done, and does this actually help them do it.’</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Why It Matters</h2>
+    <p>Most marketing underperforms not because the message is unclear, but because it's answering a question the audience never asked. A rewards program pitched as ‘earn more rewards’ fails if the seller's real job is ‘reduce uncertainty about which actions actually pay off.’ Reframing around the real job changes what the audience hears.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>How I Apply It</h2>
+    <ol class="steps">
+      <li>Map the audience's actual goal in their own words, not the product's feature list.</li>
+      <li>Identify what ‘hiring’ the product replaces — a manual process, a competitor tool, or doing nothing at all.</li>
+      <li>Build messaging around the job, not the feature.</li>
+      <li>Test whether adoption follows the reframed job, not just awareness of the program.</li>
+    </ol>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>In Practice — Seller Rewards Program</h2>
+    <div class="practice-card">
+      <p>Amazon's Seller Rewards Program had low awareness among SMB sellers — not because they didn't know it existed, but because it didn't map to a job they were trying to get done. I mapped friction across the onboarding journey and reframed the program around the seller's actual job — reducing uncertainty about which actions paid off — rather than ‘earn rewards.’ Segmented messaging built around that reframing is what moved adoption, not a louder awareness push.</p>
+      <span class="result-pill">Result → 21% increase in seller acquisition, 11% dormant seller reactivation</span>
+    </div>
+  </div>
+</section>
+
+<div class="cta">
+  <div class="wrap">
+    <h2>See the full case study</h2>
+    <p>This framework is one piece of a larger case study on the portfolio site.</p>
+    <a class="btn" href="khushbu-portfolio-v4-updated.html#work">Seller Rewards & Sale Event Planner →</a>
+  </div>
+</div>
+
+<footer>© 2026 Khushbu Bharti · Bengaluru, India</footer>
+
+</body>
+</html>

@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Khushbu Bharti — Marketing & Communications Strategist</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#ffffff; --cream-deep:#f0f0f0; --paper:#ffffff; --ink:#151515; --ink-soft:#666666;
+    --green:#333333; --green-deep:#000000; --green-bright:#9a9a9a; --lime:#e4e4e4; --line:#dcdcdc;
+    --amber:#5c5c5c;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{background:var(--cream); color:var(--ink); font-family:'Manrope',sans-serif; font-size:16px; line-height:1.65; -webkit-font-smoothing:antialiased; overflow-x:hidden;}
+  a{color:inherit;} ::selection{background:var(--green); color:var(--cream);}
+  .wrap{max-width:1100px; margin:0 auto; padding:0 32px; position:relative;}
+  h1,h2,h3,h4{font-family:'Newsreader',serif; font-weight:500; letter-spacing:-0.01em; color:var(--ink);}
+  .mono{font-family:'JetBrains Mono',monospace;}
+  .mark{background-image:linear-gradient(var(--lime), var(--lime)); background-repeat:no-repeat; background-size:100% 0.4em; background-position:0 88%; padding:0 2px;}
+
+  .secnum-bg{
+    position:absolute; top:-38px; left:-6px; font-family:'Newsreader',serif; font-weight:700;
+    font-size:150px; color:transparent; -webkit-text-stroke:1.5px rgba(0,0,0,0.14);
+    line-height:1; z-index:0; user-select:none; pointer-events:none;
+  }
+
+  nav{position:sticky; top:0; z-index:60; background:rgba(250,247,239,0.88); backdrop-filter:blur(10px); border-bottom:1px solid var(--line);}
+  .nav-inner{max-width:1100px; margin:0 auto; padding:16px 32px; display:flex; align-items:center; justify-content:space-between; gap:16px;}
+  .nav-mono{font-family:'Newsreader',serif; font-size:18px; font-weight:600;}
+  .nav-role{font-family:'JetBrains Mono',monospace; font-size:10.5px; color:var(--ink-soft); letter-spacing:0.02em;}
+  .nav-links{display:flex; gap:22px; list-style:none; font-size:13.5px; font-weight:500;}
+  .nav-links a{text-decoration:none; color:var(--ink-soft); position:relative; padding-bottom:2px;}
+  .nav-links a::after{content:""; position:absolute; left:0; bottom:-3px; width:0; height:2px; background:var(--green); transition:width .2s;}
+  .nav-links a:hover::after{width:100%;}
+  .nav-links a:hover{color:var(--green-deep);}
+  .nav-cta{font-size:13px; font-weight:600; padding:9px 18px; background:var(--green); color:var(--cream); border-radius:30px; text-decoration:none; white-space:nowrap;}
+  .nav-cta:hover{background:var(--green-deep);}
+
+  .hero{padding:80px 0 0; position:relative; overflow:hidden;}
+  .blob{position:absolute; border-radius:48% 52% 60% 40%/45% 55% 45% 55%; background:var(--green); opacity:0.05; z-index:0;}
+  .blob-1{width:520px; height:520px; top:-220px; right:-180px;}
+  .blob-2{width:280px; height:280px; bottom:-140px; left:-100px; background:var(--lime); opacity:0.14;}
+  .status-pill{
+    display:inline-flex; align-items:center; gap:8px; font-family:'JetBrains Mono',monospace;
+    font-size:12.5px; color:var(--green-deep); background:var(--paper); border:1px solid var(--line);
+    padding:7px 16px; border-radius:30px; margin-bottom:28px; position:relative; z-index:1;
+  }
+  .status-pill .dot{width:6px; height:6px; border-radius:50%; background:var(--green-bright); display:inline-block; box-shadow:0 0 0 3px rgba(0,0,0,0.15);}
+  .hero-grid{display:grid; grid-template-columns:1.5fr 1fr; gap:40px; align-items:center; position:relative; z-index:1;}
+  .position-line{font-family:'JetBrains Mono',monospace; font-size:13px; color:var(--green); letter-spacing:0.08em; text-transform:uppercase; margin-bottom:14px;}
+  .hero h1{font-size:54px; line-height:1.1; margin-bottom:20px;}
+  .hero h1 em{color:var(--green-deep); font-style:italic;}
+  .hero p.lede{font-size:17.5px; color:var(--ink-soft); max-width:520px; margin-bottom:32px;}
+  .btn-primary{background:var(--green); color:var(--cream); text-decoration:none; padding:15px 28px; font-size:14px; font-weight:600; border-radius:30px; display:inline-block; box-shadow:0 8px 20px -8px rgba(0,0,0,0.35);}
+  .btn-primary:hover{background:var(--green-deep);}
+  .btn-secondary{border:1.5px solid var(--green); color:var(--green-deep); text-decoration:none; padding:13px 26px; font-size:14px; font-weight:600; border-radius:30px; display:inline-block; margin-left:10px;}
+  .btn-secondary:hover{background:var(--green); color:var(--cream);}
+  .avatar-block{width:100%; max-width:260px; aspect-ratio:1/1; margin-left:auto; position:relative; background:linear-gradient(150deg, #3a3a3a 0%, var(--ink) 100%); border-radius:42% 58% 63% 37%/45% 40% 60% 55%; display:flex; align-items:center; justify-content:center;}
+  .avatar-block span{font-family:'Newsreader',serif; font-size:68px; color:var(--cream); font-weight:600;}
+  .avatar-img{width:100%; height:100%; object-fit:cover; border-radius:42% 58% 63% 37%/45% 40% 60% 55%;}
+  .avatar-ring{position:absolute; inset:-16px; border:1.5px dashed rgba(0,0,0,0.25); border-radius:42% 58% 63% 37%/45% 40% 60% 55%; z-index:-1;}
+
+  .stat-row{display:flex; gap:0; margin-top:56px; position:relative; z-index:1; flex-wrap:wrap;}
+  .stat{flex:1; min-width:170px; padding:24px 0; border-top:2px solid var(--ink);}
+  .stat + .stat{margin-left:32px;}
+  .stat-num{font-family:'JetBrains Mono',monospace; font-size:28px; color:var(--green-deep); font-weight:500;}
+  .stat-label{font-size:12.5px; color:var(--ink-soft); margin-top:6px;}
+  .wave{display:block; width:100%; height:56px; margin-top:60px;}
+
+  section{padding:84px 0; position:relative;}
+  .sec-head{position:relative; margin-bottom:16px; z-index:1;}
+  .sec-head-row{display:flex; align-items:baseline; gap:20px; flex-wrap:wrap;}
+  .sec-head h2{font-size:31px;}
+  .sec-sub{color:var(--ink-soft); max-width:640px; margin-bottom:44px; font-size:15.5px; position:relative; z-index:1;}
+  .sec-link{font-size:13.5px; font-weight:600; color:var(--green-deep); text-decoration:none; white-space:nowrap;}
+  .sec-link:hover{text-decoration:underline;}
+  .sec-tag{font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:0.14em; text-transform:uppercase; color:var(--green);}
+
+  /* THINK cards */
+  .think-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:18px; position:relative; z-index:1;}
+  .think-card{background:var(--paper); padding:26px 22px; border-radius:18px; border:1px solid var(--line); transition:transform .18s, box-shadow .18s;}
+  .think-card:hover{transform:translateY(-4px); box-shadow:0 16px 30px -18px rgba(0,0,0,0.16); border-color:var(--green-bright);}
+  .think-num{font-family:'JetBrains Mono',monospace; font-size:11px; color:var(--amber); letter-spacing:0.08em;}
+  .think-card h4{font-size:16.5px; margin:12px 0 8px; font-weight:600;}
+  .think-card p{font-size:13px; color:var(--ink-soft);}
+  .think-applied{display:block; margin-top:14px; font-size:12px; font-weight:600; color:var(--green-deep); border-top:1px dashed var(--line); padding-top:10px;}
+
+  /* NOW cards (kept, used in Building Next as status cards too) */
+  .now-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:18px; position:relative; z-index:1;}
+  .now-card{background:var(--paper); padding:26px 22px; min-height:180px; display:flex; flex-direction:column; border-radius:18px; border:1px solid var(--line); transition:transform .18s, box-shadow .18s;}
+  .now-card:hover{transform:translateY(-4px); box-shadow:0 16px 30px -18px rgba(0,0,0,0.16); border-color:var(--green-bright);}
+  .now-cat{font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:0.08em; text-transform:uppercase; color:var(--ink-soft); border:1px solid var(--line); display:inline-block; padding:3px 10px; border-radius:20px; width:fit-content;}
+  .now-card h4{font-size:16.5px; margin:14px 0 8px; font-weight:600; line-height:1.3;}
+  .now-card p{font-size:13px; color:var(--ink-soft); flex-grow:1;}
+  .now-meta{font-family:'JetBrains Mono',monospace; font-size:10.5px; color:var(--green); margin-top:12px;}
+
+  /* WORK cards */
+  .work-list{position:relative; z-index:1;}
+  .work-card{display:grid; grid-template-columns:100px 1fr; gap:30px; padding:32px 0; border-top:1px solid var(--line); align-items:start;}
+  .work-list .work-card:last-child{border-bottom:1px solid var(--line);}
+  .work-index{font-family:'Newsreader',serif; font-size:32px; color:var(--lime); font-weight:700; -webkit-text-stroke:1px var(--green);}
+  .work-index .yr{display:block; font-family:'JetBrains Mono',monospace; color:var(--ink-soft); margin-top:10px; font-size:11.5px; -webkit-text-stroke:0;}
+  .work-card h3{font-size:22px; margin-bottom:8px; font-weight:600;}
+  .work-card .role{font-size:13.5px; color:var(--ink-soft); margin-bottom:10px;}
+  .work-card p{font-size:14.5px; color:var(--ink-soft); max-width:620px;}
+  .work-tags{display:flex; gap:8px; margin-top:16px; flex-wrap:wrap;}
+  .work-tags span{font-family:'JetBrains Mono',monospace; font-size:11px; color:var(--ink-soft); border:1px solid var(--line); padding:4px 12px; border-radius:20px;}
+  .work-result{font-family:'JetBrains Mono',monospace; font-size:13.5px; color:var(--green-deep); font-weight:600; margin-top:16px; background:transparent; border:1px solid var(--green-bright); display:inline-block; padding:7px 14px; border-radius:20px;}
+
+  /* LAB — shipped */
+  .lab-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:22px; position:relative; z-index:1;}
+  .lab-card{border:1px solid var(--line); padding:26px 22px; border-radius:18px; background:var(--paper); transition:transform .18s, box-shadow .18s;}
+  .lab-card:hover{transform:translateY(-4px); box-shadow:0 16px 30px -18px rgba(0,0,0,0.16);}
+  .lab-status{font-family:'JetBrains Mono',monospace; font-size:10.5px; letter-spacing:0.08em; text-transform:uppercase; padding:4px 11px; border-radius:20px; display:inline-block;}
+  .lab-status.active{background:transparent; color:var(--green-deep); border:1px solid var(--green-bright);}
+  .lab-status.completed{background:var(--cream-deep); color:var(--ink-soft);}
+  .lab-status.planned{background:var(--paper); color:var(--amber); border:1px dashed var(--amber);}
+  .lab-cat{font-family:'JetBrains Mono',monospace; font-size:11px; color:var(--ink-soft); letter-spacing:0.04em; text-transform:uppercase; margin-top:14px;}
+  .lab-card h3{font-size:18px; margin:8px 0 8px; font-weight:600;}
+  .lab-card p{font-size:13.5px; color:var(--ink-soft);}
+  .lab-arrow{margin-top:16px; font-size:12.5px; color:var(--green-deep); font-weight:600; text-decoration:none; display:inline-block;}
+  .lab-arrow:hover{text-decoration:underline;}
+
+  /* ROADMAP — building next (honest, unbuilt) */
+  .roadmap-banner{
+    background:var(--paper); border:1.5px dashed var(--amber); border-radius:18px; padding:24px 26px; margin-bottom:32px;
+    display:flex; gap:16px; align-items:flex-start; position:relative; z-index:1;
+  }
+  .roadmap-banner .icon{font-family:'JetBrains Mono',monospace; font-size:11px; color:var(--amber); background:rgba(0,0,0,0.06); padding:5px 11px; border-radius:20px; white-space:nowrap;}
+  .roadmap-banner p{font-size:14px; color:var(--ink-soft);}
+  .roadmap-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:20px; position:relative; z-index:1;}
+  .rm-card{border:1px solid var(--line); border-left:3px solid var(--amber); border-radius:4px 16px 16px 4px; background:var(--paper); padding:24px 24px;}
+  .rm-top{display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;}
+  .rm-card h4{font-size:17.5px; font-weight:600;}
+  .rm-card p{font-size:13.5px; color:var(--ink-soft); margin-bottom:12px;}
+  .rm-why{font-size:12.5px; color:var(--green-deep); background:transparent; border:1px solid var(--green-bright); display:inline-block; padding:5px 12px; border-radius:20px;}
+
+  /* WRITING */
+  .writing-list{position:relative; z-index:1;}
+  .write-row{display:flex; justify-content:space-between; gap:24px; padding:24px 0; border-top:1px solid var(--line); align-items:center;}
+  .writing-list .write-row:last-child{border-bottom:1px solid var(--line);}
+  .write-meta{font-family:'JetBrains Mono',monospace; font-size:11.5px; color:var(--green); margin-bottom:6px;}
+  .write-row h3{font-size:18px; font-weight:600; margin-bottom:6px;}
+  .write-row p{font-size:13.5px; color:var(--ink-soft); max-width:520px;}
+  .write-link{font-family:'JetBrains Mono',monospace; font-size:12.5px; color:var(--green-deep); text-decoration:none; white-space:nowrap; border-bottom:1.5px solid var(--lime);}
+  .write-foot{margin-top:24px; font-size:13.5px; color:var(--ink-soft); display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px;}
+
+  /* CREDENTIALS */
+  .cred-wrap{display:grid; grid-template-columns:1fr 1fr; gap:56px; position:relative; z-index:1;}
+  .cred-col h4{font-family:'JetBrains Mono',monospace; font-size:11.5px; letter-spacing:0.1em; text-transform:uppercase; color:var(--green-deep); margin-bottom:16px;}
+  .cred-col ul{list-style:none;}
+  .cred-col li{font-size:14.5px; color:var(--ink-soft); padding:11px 0; border-top:1px solid var(--line);}
+  .cred-col li:last-child{border-bottom:1px solid var(--line);}
+  .cred-note{background:var(--cream-deep); color:var(--ink); border-left:3px solid var(--green); padding:16px 20px; font-size:14px; border-radius:2px 12px 12px 2px; margin-top:18px;}
+
+  .closer{background:var(--ink); color:var(--cream); padding:96px 0; text-align:center; position:relative; overflow:hidden;}
+  .closer .blob{background:var(--green-bright); opacity:0.08;}
+  .closer h2{color:var(--cream); font-size:38px; max-width:640px; margin:0 auto 18px; position:relative; z-index:1;}
+  .closer p{color:#cfcfcf; max-width:480px; margin:0 auto 32px; font-size:16px; position:relative; z-index:1;}
+  .closer .btn-primary{background:var(--green-bright); color:var(--ink); position:relative; z-index:1;}
+  .closer .btn-primary:hover{background:#e0e0e0;}
+
+  footer{background:var(--cream-deep); padding:54px 0 30px;}
+  .foot-grid{display:grid; grid-template-columns:1.4fr 1fr 1fr 1fr; gap:32px; margin-bottom:40px;}
+  .foot-mark{font-family:'Newsreader',serif; font-size:19px; font-weight:600; margin-bottom:10px;}
+  .foot-grid h5{font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:0.08em; text-transform:uppercase; color:var(--green-deep); margin-bottom:14px;}
+  .foot-grid ul{list-style:none; display:flex; flex-direction:column; gap:9px;}
+  .foot-grid a{font-size:13.5px; color:var(--ink-soft); text-decoration:none;}
+  .foot-grid a:hover{color:var(--green-deep);}
+  .foot-fine{border-top:1px solid var(--line); padding-top:20px; display:flex; justify-content:space-between; font-size:12.5px; color:var(--ink-soft); font-family:'JetBrains Mono',monospace; flex-wrap:wrap; gap:8px;}
+
+  @media (max-width:860px){
+    .hero-grid{grid-template-columns:1fr;} .hero h1{font-size:36px;} .avatar-block{margin:0 auto;}
+    .stat-row{flex-direction:column; gap:0;} .stat + .stat{margin-left:0;}
+    .think-grid{grid-template-columns:repeat(2,1fr);} .now-grid{grid-template-columns:repeat(2,1fr);}
+    .lab-grid{grid-template-columns:1fr;} .roadmap-grid{grid-template-columns:1fr;} .cred-wrap{grid-template-columns:1fr;}
+    .foot-grid{grid-template-columns:1fr 1fr;} .nav-links{display:none;} .work-card{grid-template-columns:1fr;}
+    .secnum-bg{font-size:86px; top:-22px;}
+  }
+  @media (max-width:560px){
+    .wrap{padding:0 20px;} .think-grid{grid-template-columns:1fr;} .now-grid{grid-template-columns:1fr;} .foot-grid{grid-template-columns:1fr;}
+  }
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto;}}
+  :focus-visible{outline:2px solid var(--green); outline-offset:3px;}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <div>
+      <div class="nav-mono">Khushbu Bharti</div>
+      <div class="nav-role">Marketing &amp; Communications Strategist</div>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#think">How I Think</a></li>
+      <li><a href="#work">Work</a></li>
+      <li><a href="#resume">Resume</a></li>
+      <li><a href="#lab">Lab</a></li>
+      <li><a href="#roadmap">Roadmap</a></li>
+      <li><a href="#writing">Writing</a></li>
+    </ul>
+    <a class="nav-cta" href="#contact">Get in touch →</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+  <div class="wrap">
+    <span class="status-pill"><span class="dot"></span> Currently at Computacenter, Bengaluru</span>
+    <div class="hero-grid">
+      <div>
+        <div class="position-line">Marketing &amp; Communications Strategist · Executive Communications, Employer Branding &amp; Growth Marketing</div>
+        <h1>Diagnose. Structure.<br><em>Ship the strategy.</em></h1>
+        <p class="lede">I help organisations treat marketing, brand, and communications as <span class="mark">business decisions</span> — not just creative output. Seven years turning stalled adoption, weak employer brands, and fractured internal trust into frameworks leadership can act on.</p>
+        <a class="btn-primary" href="#work">View Case Studies →</a><a class="btn-secondary" href="https://drive.google.com/file/d/1Y50HFdqb_7MYzn28SKB-yAWwA3SDV_zt/view?usp=drive_link" target="_blank" rel="noopener">View Resume (PDF) ↗</a>
+      </div>
+      <div class="avatar-block"><div class="avatar-ring"></div><img src="profile-picture.png" alt="Khushbu Bharti - Marketing &amp; Communications Strategist" class="avatar-img"></div>
+    </div>
+    <div class="stat-row">
+      <div class="stat"><div class="stat-num">07</div><div class="stat-label">Years Building Brands</div></div>
+      <div class="stat"><div class="stat-num">41%</div><div class="stat-label">Overall Program Growth via Experimentation, Amazon</div></div>
+      <div class="stat"><div class="stat-num">03</div><div class="stat-label">Industries: Fashion, E-commerce, Enterprise IT</div></div>
+    </div>
+    <svg class="wave" viewBox="0 0 1100 60" preserveAspectRatio="none"><path d="M0,30 C200,60 350,0 550,30 C750,60 900,0 1100,30 L1100,60 L0,60 Z" fill="#2f6a4f" opacity="0.06"/></svg>
+  </div>
+</header>
+
+<section id="think">
+  <div class="wrap">
+    <div class="sec-head"><span class="secnum-bg">01</span>
+      <div class="sec-head-row"><span class="sec-tag">How I Think</span></div>
+      <h2>Frameworks over improvisation</h2>
+    </div>
+    <p class="sec-sub">The single fastest way to read as a strategist rather than an executor: name the mental model behind the work. These are the five I reach for most.</p>
+    <div class="think-grid">
+      <div class="think-card">
+        <span class="think-num">MODEL 01</span>
+        <h4>Jobs-to-be-Done</h4>
+        <p>What is the audience actually "hiring" a product or program to do — before touching messaging.</p>
+        <a class="think-applied" href="framework-jtbd.html">Read the one-pager → Seller Rewards</a>
+      </div>
+      <div class="think-card">
+        <span class="think-num">MODEL 02</span>
+        <h4>MECE Structuring</h4>
+        <p>Mutually exclusive, collectively exhaustive — the discipline behind every framework I build.</p>
+        <a class="think-applied" href="framework-mece.html">Read the one-pager → EVP Framework</a>
+      </div>
+      <div class="think-card">
+        <span class="think-num">MODEL 03</span>
+        <h4>Behavioural Segmentation</h4>
+        <p>Treating an audience as distinct groups by behaviour and eligibility, not one undifferentiated block.</p>
+        <a class="think-applied" href="framework-segmentation.html">Read the one-pager → Sale Event Planner</a>
+      </div>
+      <div class="think-card">
+        <span class="think-num">MODEL 04</span>
+        <h4>Pyramid Principle</h4>
+        <p>Answer first, structure second — how I write every recommendation, memo, and executive deck.</p>
+        <a class="think-applied" href="framework-pyramid.html">Read the one-pager → Exec comms</a>
+      </div>
+      <div class="think-card">
+        <span class="think-num">MODEL 05</span>
+        <h4>Hypothesis-Driven Experimentation</h4>
+        <p>Prioritize, structure, and read a test before scaling a change — never scale on a hunch.</p>
+        <a class="think-applied" href="framework-experimentation.html">Read the one-pager → Amazon Launchpad</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="work" style="background:var(--cream-deep);">
+  <div class="wrap">
+    <div class="sec-head"><span class="secnum-bg">02</span>
+      <div class="sec-head-row"><span class="sec-tag">Work</span></div>
+      <div class="sec-head-row">
+        <h2>Selected work</h2>
+        <a class="sec-link" href="#contact">Read full case studies ↗</a>
+      </div>
+    </div>
+    <p class="sec-sub">Seven years of programs across Amazon and Computacenter. The four that say the most about how I actually work — each led with the business question, not the task.</p>
+    <div class="work-list">
+      <div class="work-card">
+        <div class="work-index">01<span class="yr">2022–2025</span></div>
+        <div>
+          <h3>Amazon Launchpad: Growth Through Experimentation</h3>
+          <div class="role">Growth Marketing · Amazon</div>
+          <p>Designed a data-driven experimentation roadmap across acquisition, activation, and retention — running 20+ growth experiments rather than scaling changes on instinct, and reading each result before committing budget to the next.</p>
+          <div class="work-tags"><span>Experimentation</span><span>Growth Marketing</span><span>Analytics</span></div>
+          <div class="work-result">Result → 44% impressions growth, +1,600 bps CTR, 41% overall program growth</div>
+        </div>
+      </div>
+      <div class="work-card">
+        <div class="work-index">02<span class="yr">2025–Present</span></div>
+        <div>
+          <h3>HR Impact Summit: Enterprise Leadership Event</h3>
+          <div class="role">Executive Communications · Computacenter</div>
+          <p>Owned end-to-end communication planning and stakeholder management for a leadership event at Sheraton — executive presentations, branding assets, stage content, and post-event engagement — coordinating HR, Procurement, and Creative teams alongside external agency and vendor partners.</p>
+          <div class="work-tags"><span>Event Leadership</span><span>Vendor Mgmt</span><span>Stakeholder Mgmt</span></div>
+          <div class="work-result">Result → Seamless enterprise-scale execution across internal and external partners</div>
+        </div>
+      </div>
+      <div class="work-card">
+        <div class="work-index">03<span class="yr">2025–Present</span></div>
+        <div>
+          <h3>The Computacenter EVP Framework</h3>
+          <div class="role">Employer Branding · Global HR Leadership</div>
+          <p>Designed a 6-pillar EVP framework grounded in competitive benchmarking, employee insight mapping, and predictive talent analytics — now Computacenter's global employer-branding standard.</p>
+          <div class="work-tags"><span>Employer Brand</span><span>Framework Design</span><span>MECE</span></div>
+          <div class="work-result">Result → Adopted as the global standard across regions</div>
+        </div>
+      </div>
+      <div class="work-card">
+        <div class="work-index">04<span class="yr">2022–2025</span></div>
+        <div>
+          <h3>Seller Rewards &amp; Sale Event Planner: Driving Adoption at Scale</h3>
+          <div class="role">Program Marketing · Amazon Seller Programs</div>
+          <p>Mapped friction across the seller journey, segmented sellers by behaviour, and designed lifecycle campaigns across email, in-app messaging, Seller Central, webinars, and WhatsApp — including repositioning Sale Event Planner from a utility to a revenue accelerator.</p>
+          <div class="work-tags"><span>GTM</span><span>Segmentation</span><span>Lifecycle Marketing</span></div>
+          <div class="work-result">Result → 21% seller acquisition growth, 11% dormant reactivation, 13–34% program adoption</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="lab">
+  <div class="wrap">
+    <div class="sec-head"><span class="secnum-bg">03</span>
+      <div class="sec-head-row"><span class="sec-tag">Independent Projects</span></div>
+      <h2>Things I work on outside the day job</h2>
+    </div>
+    <p class="sec-sub">Four projects I've started on my own time — not assigned by an employer, just things I wanted to test properly.</p>
+    <div class="lab-grid">
+      <div class="lab-card">
+        <span class="lab-status planned">Planned</span>
+        <div class="lab-cat">Strategic Analysis</div>
+        <h3>The Strategy Postmortem Series</h3>
+        <p>Reverse-engineering real corporate decisions — rebrands, pivots, leadership calls — and writing up what I'd have done differently, one case at a time.</p>
+        <a class="lab-arrow" href="project-strategy-postmortems.html">View project →</a>
+      </div>
+      <div class="lab-card">
+        <span class="lab-status planned">Planned</span>
+        <div class="lab-cat">Growth · Resourcefulness</div>
+        <h3>The $0 Growth Sprint</h3>
+        <p>A 30-day, zero-budget growth challenge on a real small business — one metric, one public target, no ad spend.</p>
+        <a class="lab-arrow" href="project-zero-dollar-growth-sprint.html">View project →</a>
+      </div>
+      <div class="lab-card">
+        <span class="lab-status planned">Planned</span>
+        <div class="lab-cat">Employer Branding · Case Study</div>
+        <h3>The Outsider's 100-Day Plan</h3>
+        <p>If I were hired tomorrow to fix employer branding at a company I've never worked for — a full diagnosis and plan built entirely from public information.</p>
+        <a class="lab-arrow" href="project-outsiders-100-day-plan.html">View project →</a>
+      </div>
+      <div class="lab-card">
+        <span class="lab-status planned">Planned</span>
+        <div class="lab-cat">Product · Strategy Tooling</div>
+        <h3>The GTM Decision Simulator</h3>
+        <p>A small interactive tool that turns my own go-to-market framework into something anyone can use — a live tool instead of a slide deck.</p>
+        <a class="lab-arrow" href="project-gtm-decision-simulator.html">View project →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="roadmap" style="background:var(--cream-deep);">
+  <div class="wrap">
+    <div class="sec-head"><span class="secnum-bg">04</span>
+      <div class="sec-head-row"><span class="sec-tag">Roadmap · Building Next</span></div>
+      <h2>What I'm building next, and why</h2>
+    </div>
+    <div class="roadmap-banner">
+      <span class="icon">HONEST NOTE</span>
+      <p>These two don't exist yet — they're the last gaps my real case studies don't cover: unprompted diagnosis, and written executive judgment in memo form. Different from the Independent Projects above, which are creative and self-directed by design — these two are deliberately narrow and targeted at exactly what a strategy/consulting panel checks for. Each is scoped to be resume-ready within 4–6 weeks.</p>
+    </div>
+    <div class="roadmap-grid">
+      <div class="rm-card">
+        <div class="rm-top"><h4>Business Diagnosis, Pro Bono</h4><span class="lab-status planned">Planned</span></div>
+        <p>End-to-end diagnosis and 90-day action plan for a real SMB, using SWOT and Business Model Canvas — unprompted by an employer.</p>
+        <span class="rm-why">Highest-value: proves consulting judgment, not just execution</span>
+      </div>
+      <div class="rm-card">
+        <div class="rm-top"><h4>Opportunity Assessment Memo</h4><span class="lab-status planned">Planned</span></div>
+        <p>"Should Computacenter expand its EVP model to a new region?" — a 2-page memo with a clear recommendation, Pyramid Principle structured.</p>
+        <span class="rm-why">Tests written executive communication directly</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="writing">
+  <div class="wrap">
+    <div class="sec-head"><span class="secnum-bg">05</span>
+      <div class="sec-head-row"><span class="sec-tag">Writing</span></div>
+      <h2>From the archive</h2>
+    </div>
+    <p class="sec-sub">Original frameworks, published — the fastest proof that this is a body of thinking, not a portfolio of tasks.</p>
+    <div class="writing-list">
+      <div class="write-row">
+        <div>
+          <div class="write-meta">Strategy · 6 min read</div>
+          <h3>The Comms Flow Framework</h3>
+          <p>Mapping how internal communication flows directly shape external trust and PR risk.</p>
+        </div>
+        <a class="write-link" href="https://medium.com/@khushbubharti.97" target="_blank" rel="noopener">Read the piece →</a>
+      </div>
+      <div class="write-row">
+        <div>
+          <div class="write-meta">Program Marketing · 5 min read</div>
+          <h3>The Event Horizon Protocol</h3>
+          <p>Turning one-time experiences into perpetual, ROI-generating programs.</p>
+        </div>
+        <a class="write-link" href="https://medium.com/@khushbubharti.97" target="_blank" rel="noopener">Read the piece →</a>
+      </div>
+      <div class="write-row">
+        <div>
+          <div class="write-meta">Employer Brand · 7 min read</div>
+          <h3>The Employer Brand as First-Party Data Strategy</h3>
+          <p>Why authentic employer branding is becoming every company's most durable trust asset.</p>
+        </div>
+        <a class="write-link" href="https://medium.com/@khushbubharti.97" target="_blank" rel="noopener">Read the piece →</a>
+      </div>
+    </div>
+    <div class="write-foot">
+      <span>4 articles · Strategy, Brand, Comms, GTM</span>
+      <a class="sec-link" href="https://medium.com/@khushbubharti.97" target="_blank" rel="noopener">All writing ↗</a>
+    </div>
+  </div>
+</section>
+
+<section id="resume" style="background:var(--cream-deep);">
+  <div class="wrap">
+    <div class="sec-head"><span class="secnum-bg">06</span>
+      <div class="sec-head-row"><span class="sec-tag">Resume &amp; Experience</span></div>
+      <div class="sec-head-row" style="justify-content:space-between; align-items:center; width:100%;">
+        <h2>Career Overview &amp; Resume</h2>
+        <a class="btn-primary" href="https://drive.google.com/file/d/1Y50HFdqb_7MYzn28SKB-yAWwA3SDV_zt/view?usp=drive_link" target="_blank" rel="noopener" style="padding:10px 22px; font-size:13px; text-decoration:none;">View Resume (PDF) ↗</a>
+      </div>
+    </div>
+    <p class="sec-sub">7+ years leading executive comms, employer branding, and growth marketing for global organizations. View structured career highlights below or open the full PDF resume.</p>
+
+    <!-- Resume Banner & Summary -->
+    <div style="background:var(--paper); border:1px solid var(--line); border-radius:18px; padding:28px 32px; margin-bottom:36px; position:relative; z-index:1;">
+      <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px; margin-bottom:20px; border-bottom:1px solid var(--line); padding-bottom:18px;">
+        <div>
+          <h3 style="font-size:24px; font-weight:600; font-family:'Newsreader',serif;">Khushbu Bharti</h3>
+          <div style="font-family:'JetBrains Mono',monospace; font-size:12.5px; color:var(--green); margin-top:2px;">Marketing &amp; Communications Strategist · Bengaluru, India</div>
+        </div>
+      </div>
+
+      <!-- Key Impact Metrics -->
+      <div style="margin-bottom:24px;">
+        <div style="font-family:'JetBrains Mono',monospace; font-size:11px; text-transform:uppercase; letter-spacing:0.08em; color:var(--ink-soft); margin-bottom:12px;">Key Career Impact Metrics</div>
+        <div style="display:flex; flex-wrap:wrap; gap:10px;">
+          <span style="font-family:'JetBrains Mono',monospace; font-size:12px; background:var(--cream-deep); border:1px solid var(--line); padding:6px 14px; border-radius:20px; color:var(--ink);">Seller Acquisition <strong>+21%</strong></span>
+          <span style="font-family:'JetBrains Mono',monospace; font-size:12px; background:var(--cream-deep); border:1px solid var(--line); padding:6px 14px; border-radius:20px; color:var(--ink);">Dormant Reactivation <strong>+11%</strong></span>
+          <span style="font-family:'JetBrains Mono',monospace; font-size:12px; background:var(--cream-deep); border:1px solid var(--line); padding:6px 14px; border-radius:20px; color:var(--ink);">Program Growth <strong>+41%</strong></span>
+          <span style="font-family:'JetBrains Mono',monospace; font-size:12px; background:var(--cream-deep); border:1px solid var(--line); padding:6px 14px; border-radius:20px; color:var(--ink);">Program Adoption <strong>+13%</strong></span>
+          <span style="font-family:'JetBrains Mono',monospace; font-size:12px; background:var(--cream-deep); border:1px solid var(--line); padding:6px 14px; border-radius:20px; color:var(--ink);">Event Engagement <strong>+34%</strong></span>
+          <span style="font-family:'JetBrains Mono',monospace; font-size:12px; background:var(--cream-deep); border:1px solid var(--line); padding:6px 14px; border-radius:20px; color:var(--ink);">Launchpad Impressions <strong>+44%</strong></span>
+          <span style="font-family:'JetBrains Mono',monospace; font-size:12px; background:var(--cream-deep); border:1px solid var(--line); padding:6px 14px; border-radius:20px; color:var(--ink);">CTR <strong>+1,600 bps</strong></span>
+          <span style="font-family:'JetBrains Mono',monospace; font-size:12px; background:var(--cream-deep); border:1px solid var(--line); padding:6px 14px; border-radius:20px; color:var(--ink);"><strong>20+</strong> Growth Experiments</span>
+        </div>
+      </div>
+
+      <!-- Core Competencies Grid -->
+      <div style="display:grid; grid-template-columns:repeat(2, 1fr); gap:20px; border-top:1px solid var(--line); padding-top:20px;">
+        <div>
+          <h4 style="font-family:'JetBrains Mono',monospace; font-size:11px; text-transform:uppercase; letter-spacing:0.08em; color:var(--green-deep); margin-bottom:8px;">Strategy &amp; Leadership</h4>
+          <p style="font-size:13.5px; color:var(--ink-soft); line-height:1.5;">Executive Communications, GTM Strategy, Employer Value Proposition (EVP) Design, Brand Strategy, Cross-Functional Leadership, Stakeholder Management</p>
+        </div>
+        <div>
+          <h4 style="font-family:'JetBrains Mono',monospace; font-size:11px; text-transform:uppercase; letter-spacing:0.08em; color:var(--green-deep); margin-bottom:8px;">Marketing &amp; Growth</h4>
+          <p style="font-size:13.5px; color:var(--ink-soft); line-height:1.5;">Product &amp; Program Marketing, Lifecycle Marketing, Growth Experimentation, Performance Marketing, Behavioral Segmentation</p>
+        </div>
+        <div>
+          <h4 style="font-family:'JetBrains Mono',monospace; font-size:11px; text-transform:uppercase; letter-spacing:0.08em; color:var(--green-deep); margin-bottom:8px;">Communications &amp; Events</h4>
+          <p style="font-size:13.5px; color:var(--ink-soft); line-height:1.5;">Employer Branding, Corporate &amp; Internal Communications, Leadership Event Management, Agency &amp; Vendor Management, Executive Presentations</p>
+        </div>
+        <div>
+          <h4 style="font-family:'JetBrains Mono',monospace; font-size:11px; text-transform:uppercase; letter-spacing:0.08em; color:var(--green-deep); margin-bottom:8px;">Data &amp; Tools</h4>
+          <p style="font-size:13.5px; color:var(--ink-soft); line-height:1.5;">Power BI, Tableau, Google Analytics, MS Excel, MS PowerPoint, Google Workspace, HubSpot</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Detailed Experience Timeline -->
+    <div style="margin-bottom:40px; position:relative; z-index:1;">
+      <h3 style="font-size:22px; font-family:'Newsreader',serif; margin-bottom:20px; font-weight:600;">Professional Experience</h3>
+      
+      <!-- Computacenter -->
+      <div style="background:var(--paper); border:1px solid var(--line); border-radius:16px; padding:24px 28px; margin-bottom:20px;">
+        <div style="display:flex; justify-content:space-between; align-items:baseline; flex-wrap:wrap; gap:8px; margin-bottom:12px;">
+          <div>
+            <h4 style="font-size:18px; font-weight:600;">Strategic Communications &amp; Employer Branding Lead</h4>
+            <div style="font-family:'JetBrains Mono',monospace; font-size:13px; color:var(--green);">Computacenter</div>
+          </div>
+          <span style="font-family:'JetBrains Mono',monospace; font-size:12px; color:var(--ink-soft); background:var(--cream-deep); padding:4px 12px; border-radius:12px;">June 2025 – Present</span>
+        </div>
+        <ul style="padding-left:18px; color:var(--ink-soft); font-size:14px; display:flex; flex-direction:column; gap:8px;">
+          <li>Partner with senior leadership on strategic communication initiatives supporting business transformation and employee engagement; own executive communication planning — leadership presentations, keynote messaging, and thought leadership content.</li>
+          <li>Architected a global Employer Value Proposition (EVP) framework and employer branding communications strategy — defining culture narratives, brand pillars, and messaging guidelines — establishing a consistent recruitment standard across regions.</li>
+          <li>Led end-to-end communication planning and stakeholder management for enterprise leadership events, including the HR Impact Summit at Sheraton, coordinating HR, Procurement, and Creative teams alongside external agency partners.</li>
+          <li>Developed executive-level presentations for leadership forums, client engagements (including Apple and Dell), and annual business reviews, translating complex business information into executive narratives.</li>
+          <li>Manage agency relationships and coordinate integrated PR, employer branding, and digital marketing campaigns; own annual executive communication and content calendars.</li>
+        </ul>
+      </div>
+
+      <!-- Amazon -->
+      <div style="background:var(--paper); border:1px solid var(--line); border-radius:16px; padding:24px 28px; margin-bottom:20px;">
+        <div style="display:flex; justify-content:space-between; align-items:baseline; flex-wrap:wrap; gap:8px; margin-bottom:12px;">
+          <div>
+            <h4 style="font-size:18px; font-weight:600;">Product &amp; Program Marketing</h4>
+            <div style="font-family:'JetBrains Mono',monospace; font-size:13px; color:var(--green);">Amazon</div>
+          </div>
+          <span style="font-family:'JetBrains Mono',monospace; font-size:12px; color:var(--ink-soft); background:var(--cream-deep); padding:4px 12px; border-radius:12px;">October 2022 – May 2025</span>
+        </div>
+        <ul style="padding-left:18px; color:var(--ink-soft); font-size:14px; display:flex; flex-direction:column; gap:8px;">
+          <li>Led integrated go-to-market strategy for Amazon Seller Programs (SEP, SRP, Rewards Points, Launchpad, Karigar, Saheli) — positioning, messaging, and multi-channel plans driving 13–44% adoption and engagement growth.</li>
+          <li>Owned marketing strategy for Seller Rewards Program and Sale Event Planner, designing lifecycle campaigns (email, in-app, Seller Central, webinars, WhatsApp) that increased seller acquisition 21% and reactivated 11% of dormant sellers.</li>
+          <li>Led marketing strategy for Amazon Launchpad, driving 44% growth in impressions and a 1,600+ basis point CTR improvement through experimentation.</li>
+          <li>Designed a data-driven experimentation roadmap — 20+ growth experiments contributing to 41% overall program growth.</li>
+          <li>Partnered with Product, Category, Operations, UX, Analytics &amp; Business teams and global stakeholders (India, US, UK, China) to translate product capabilities into customer-centric, localized campaigns.</li>
+          <li>Built customer education strategy (webinars, documentation, training) and directed Amazon Sambhav execution across 8 exhibition booths.</li>
+        </ul>
+      </div>
+
+      <!-- Early Career Block -->
+      <div style="background:var(--paper); border:1px solid var(--line); border-radius:16px; padding:24px 28px;">
+        <h4 style="font-size:16px; font-weight:600; margin-bottom:14px; font-family:'Newsreader',serif;">Early Career Highlights</h4>
+        <div style="display:flex; flex-direction:column; gap:14px; font-size:13.5px; color:var(--ink-soft);">
+          <div style="border-bottom:1px dashed var(--line); padding-bottom:10px;">
+            <div style="display:flex; justify-content:space-between; font-weight:600; color:var(--ink); margin-bottom:2px;">
+              <span>Senior Executive, Content &amp; Campaigns — Shoppers Stop</span>
+              <span style="font-family:'JetBrains Mono',monospace; font-size:11.5px; font-weight:normal; color:var(--ink-soft);">Oct 2021 – Sep 2022</span>
+            </div>
+            <div>Developed seasonal and loyalty campaign content and multi-channel digital assets using customer and trend insights.</div>
+          </div>
+          <div style="border-bottom:1px dashed var(--line); padding-bottom:10px;">
+            <div style="display:flex; justify-content:space-between; font-weight:600; color:var(--ink); margin-bottom:2px;">
+              <span>Content Writer &amp; Creative Strategist — Rananjay Exports</span>
+              <span style="font-family:'JetBrains Mono',monospace; font-size:11.5px; font-weight:normal; color:var(--ink-soft);">Apr 2020 – Sep 2021</span>
+            </div>
+            <div>Delivered content strategy, brand storytelling, and UX writing for global D2C and B2B clients.</div>
+          </div>
+          <div>
+            <div style="display:flex; justify-content:space-between; font-weight:600; color:var(--ink); margin-bottom:2px;">
+              <span>Site Curator &amp; Digital Marketing Associate — Amazon</span>
+              <span style="font-family:'JetBrains Mono',monospace; font-size:11.5px; font-weight:normal; color:var(--ink-soft);">Jun 2019 – Jan 2020</span>
+            </div>
+            <div>Curated Amazon Fashion site content and executed on-site/digital marketing strategies, improving traffic and engagement.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Education & Certifications Grid -->
+    <div class="cred-wrap" id="credentials">
+      <div class="cred-col">
+        <h4>Certifications</h4>
+        <ul>
+          <li>Generative AI Marketing Professional — American Marketing Association</li>
+          <li>Product Management — Aha! / LinkedIn Learning</li>
+          <li>Turning Data into Strategies — LinkedIn Learning</li>
+          <li>Negotiation — American Negotiation Institute</li>
+          <li>Inbound Marketing — HubSpot</li>
+          <li>Google Analytics — Google</li>
+          <li>Marketing Automation — Simplilearn</li>
+        </ul>
+      </div>
+      <div class="cred-col">
+        <h4>Education &amp; Origin Story</h4>
+        <ul>
+          <li>Bachelor of Commerce (B.Com.) — Kanoria PG Mahavidhyalaya, 2018</li>
+          <li>PG Diploma in Fashion Design — JD Institute of Fashion Technology, 2019</li>
+        </ul>
+        <div class="cred-note">Fashion retail → e-commerce marketplace → enterprise IT. The industries changed. The diagnostic process didn't.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="closer">
+  <div class="blob blob-1" style="top:-260px; right:-200px;"></div>
+  <div class="wrap">
+    <span class="sec-tag" style="color:#c8dd8f;">Get In Touch</span>
+    <h2 style="margin-top:16px;">Bring me the harder problem.</h2>
+    <p>If you've got a hard problem worth solving properly, I'd like to hear about it. I read every message.</p>
+    <a class="btn-primary" href="mailto:Khushbubharti.05@gmail.com">Get in touch →</a>
+  </div>
+</section>
+
+<footer id="contact">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-mark">Khushbu Bharti</div>
+        <p style="font-size:13.5px; color:var(--ink-soft); max-width:260px;">Marketing Strategist &amp; Brand &amp; Growth Consultant. Built in Bengaluru.</p>
+      </div>
+      <div>
+        <h5>Work</h5>
+        <ul>
+          <li><a href="#work">Amazon Launchpad</a></li>
+          <li><a href="#work">HR Impact Summit</a></li>
+          <li><a href="#work">EVP Framework</a></li>
+          <li><a href="#work">Seller Rewards</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Roadmap</h5>
+        <ul>
+          <li><a href="#roadmap">Business Diagnosis</a></li>
+          <li><a href="#roadmap">Opportunity Memo</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>More</h5>
+        <ul>
+          <li><a href="https://drive.google.com/file/d/1Y50HFdqb_7MYzn28SKB-yAWwA3SDV_zt/view?usp=drive_link" target="_blank" rel="noopener">Full Resume (PDF) ↗</a></li>
+          <li><a href="#resume">Career Experience</a></li>
+          <li><a href="https://www.linkedin.com/in/khushbu-bharti-1a4161200" target="_blank" rel="noopener">LinkedIn ↗</a></li>
+          <li><a href="mailto:Khushbubharti.05@gmail.com">Email ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-fine">
+      <span>© 2026 Khushbu Bharti</span>
+      <span>Built in Bengaluru. Strategy, brand, and communications.</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

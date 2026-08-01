@@ -1,7 +1,17 @@
+if (typeof globalThis !== 'undefined' && (typeof globalThis.localStorage === 'undefined' || typeof globalThis.localStorage?.getItem !== 'function')) {
+  (globalThis as unknown as { localStorage: Record<string, unknown> }).localStorage = {
+    getItem: () => null,
+    setItem: () => {},
+    removeItem: () => {},
+    clear: () => {},
+    key: () => null,
+    length: 0,
+  };
+}
+
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/Navbar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,7 +31,6 @@ export default function RootLayout({
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
       </head>
       <body className={inter.className}>
-        <Navbar />
         {children}
       </body>
     </html>

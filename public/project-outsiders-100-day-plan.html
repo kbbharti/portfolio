@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Outsider's 100-Day Plan — Khushbu Bharti</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#ffffff; --paper-dim:#f0f0f0; --ink:#151515; --ink-soft:#666666;
+  --accent:#333333; --accent-deep:#000000; --accent-bright:#9a9a9a; --highlight:#e4e4e4; --line:#dcdcdc;
+}
+*{box-sizing:border-box; margin:0; padding:0;}
+html{scroll-behavior:smooth;}
+body{background:var(--paper); color:var(--ink); font-family:'Manrope',sans-serif; font-size:16px; line-height:1.65; -webkit-font-smoothing:antialiased;}
+a{color:inherit;} ::selection{background:var(--accent); color:var(--paper);}
+.wrap{max-width:820px; margin:0 auto; padding:0 32px;}
+h1,h2,h3{font-family:'Newsreader',serif; font-weight:500; letter-spacing:-0.01em; color:var(--ink);}
+.mono{font-family:'JetBrains Mono',monospace;}
+
+nav{position:sticky; top:0; z-index:20; background:rgba(255,255,255,0.9); backdrop-filter:blur(10px); border-bottom:1px solid var(--line);}
+.nav-inner{max-width:820px; margin:0 auto; padding:16px 32px; display:flex; align-items:center; justify-content:space-between;}
+.back-link{font-family:'JetBrains Mono',monospace; font-size:13px; color:var(--ink-soft); text-decoration:none;}
+.back-link:hover{color:var(--ink);}
+.nav-mono{font-family:'Newsreader',serif; font-size:16px; font-weight:600;}
+
+.hero{padding:64px 0 40px;}
+.eyebrow{font-family:'JetBrains Mono',monospace; font-size:12.5px; letter-spacing:0.14em; text-transform:uppercase; color:var(--ink-soft); display:flex; align-items:center; gap:10px; margin-bottom:18px;}
+.status-tag{border:1px dashed var(--accent-bright); padding:3px 10px; border-radius:20px; font-size:11px;}
+.hero h1{font-size:42px; line-height:1.12; margin-bottom:20px;}
+.hero p.lede{font-size:18px; color:var(--ink-soft); max-width:640px;}
+
+section{padding:44px 0; border-top:1px solid var(--line);}
+section h2{font-size:24px; margin-bottom:16px;}
+section p{font-size:16px; color:#333; margin-bottom:14px; max-width:680px;}
+
+.steps{counter-reset:step; list-style:none; margin-top:8px;}
+.steps li{
+  counter-increment:step; position:relative; padding-left:44px; margin-bottom:18px; font-size:15.5px; color:#333;
+}
+.steps li::before{
+  content:counter(step); position:absolute; left:0; top:-2px; width:28px; height:28px; border-radius:50%;
+  background:var(--ink); color:var(--paper); font-family:'JetBrains Mono',monospace; font-size:13px;
+  display:flex; align-items:center; justify-content:center;
+}
+
+.callout{
+  background:var(--paper-dim); border-left:3px solid var(--ink); padding:20px 22px; border-radius:2px 10px 10px 2px; margin-top:10px;
+}
+.callout p{margin-bottom:0; color:#222;}
+.callout .tag{font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:0.08em; text-transform:uppercase; color:var(--ink-soft); display:block; margin-bottom:8px;}
+
+.cta{background:var(--ink); color:var(--paper); padding:64px 0; text-align:center;}
+.cta h2{color:var(--paper); font-size:28px; margin-bottom:14px;}
+.cta p{color:#cfcfcf; max-width:460px; margin:0 auto 26px;}
+.btn{background:var(--paper); color:var(--ink); text-decoration:none; padding:14px 26px; font-size:14px; font-weight:600; border-radius:30px; display:inline-block;}
+.btn:hover{background:#e4e4e4;}
+
+footer{padding:30px 0; text-align:center; font-family:'JetBrains Mono',monospace; font-size:12px; color:var(--ink-soft);}
+
+@media (max-width:600px){
+  .hero h1{font-size:30px;}
+  .wrap{padding:0 20px;}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <div class="nav-mono">Khushbu Bharti</div>
+    <a class="back-link" href="khushbu-portfolio-v4-updated.html#lab">← Back to Portfolio</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <span class="eyebrow">Employer Branding · Case Study <span class="status-tag">In Progress</span></span>
+    <h1>The Outsider's 100-Day Plan</h1>
+    <p class="lede">If I were hired tomorrow to fix employer branding at a company I've never worked for.</p>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <h2>What It Is</h2>
+    <p>Choose one real, publicly known company with a visibly inconsistent employer brand — using only public Glassdoor reviews, its careers page, and its LinkedIn presence as raw material — and write the 100-day plan I'd bring as their new Head of Employer Brand: diagnosis, quick wins, and a pillar-based framework, built entirely from public information.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Why I'm Building It</h2>
+    <p>Employer branding work usually happens entirely inside a company's own walls, using data I'd never get to see from outside. I wanted to test whether the same diagnostic process still holds up with nothing but what's publicly visible — reviews, careers pages, LinkedIn — on a company I have no relationship with at all.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>How I'm Approaching It</h2>
+    <ol class="steps">
+      <li>Choose a company with visibly public gaps — inconsistent Glassdoor themes, a stale careers page, no clear culture narrative. Pick one to critique constructively, not to embarrass.</li>
+      <li>Gather only public signals: reviews, job postings, LinkedIn presence, recent press — no claims of insider knowledge.</li>
+      <li>Diagnose the gap using an EVP-style framework, and write a 100-day plan: first 30 days (diagnosis), next 30 (quick wins), final 40 (structural fixes).</li>
+      <li>Frame it explicitly as an independent thought exercise — the credibility comes from the rigor of the public-data analysis, not from pretending to have access that doesn't exist.</li>
+    </ol>
+    <div class="callout">
+      <span class="tag">Note to self</span>
+      <p>State clearly, in the piece itself, that this is an outside analysis based on public information only. That framing is what makes it a credible show of skill rather than an overreaching claim.</p>
+    </div>
+  </div>
+</section>
+
+<div class="cta">
+  <div class="wrap">
+    <h2>Explore the other three</h2>
+    <p>This sits alongside three other side projects — in progress, all scoped and underway.</p>
+    <a class="btn" href="khushbu-portfolio-v4-updated.html#lab">Back to Portfolio →</a>
+  </div>
+</div>
+
+<footer>© 2026 Khushbu Bharti · Bengaluru, India</footer>
+
+</body>
+</html>
