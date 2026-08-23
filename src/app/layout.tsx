@@ -1,23 +1,10 @@
-if (typeof globalThis !== 'undefined' && (typeof globalThis.localStorage === 'undefined' || typeof globalThis.localStorage?.getItem !== 'function')) {
-  (globalThis as unknown as { localStorage: Record<string, unknown> }).localStorage = {
-    getItem: () => null,
-    setItem: () => {},
-    removeItem: () => {},
-    clear: () => {},
-    key: () => null,
-    length: 0,
-  };
-}
-
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
-
-const inter = Inter({ subsets: ["latin"] });
+import Navbar from "@/components/Navbar";
 
 export const metadata: Metadata = {
-  title: "Khushbu Bharti - Corporate Communications & Marketing Specialist",
-  description: "Corporate Communications & Marketing Specialist with 5+ years of experience in strategic communications, employer branding, and performance-driven campaigns",
+  title: "Khushbu Bharti — Aspiring AI / ML Engineer",
+  description: "Marketing & growth strategist transitioning into AI/ML engineering — building RAG, agentic AI, and MLOps projects.",
 };
 
 export default function RootLayout({
@@ -28,9 +15,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
+          rel="stylesheet"
+        />
       </head>
-      <body className={inter.className}>
+      <body>
+        <Navbar />
         {children}
       </body>
     </html>
