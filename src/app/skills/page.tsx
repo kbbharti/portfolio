@@ -3,7 +3,7 @@ import Link from 'next/link'
 const skills = [
   { label: 'AI / ML', values: 'Python, LangChain, LangGraph, RAG, ReAct Agents, FastAPI, scikit-learn' },
   { label: 'MLOps', values: 'Docker, Docker Compose, Kubernetes, GKE, GitHub Actions, HPA autoscaling' },
-  { label: 'Data', values: 'PostgreSQL, pgvector, SQL, Ollama embeddings, vector search' },
+  { label: 'Data', values: 'PostgreSQL, SQL, Databricks Vector Search, Databricks Model Serving, embeddings' },
   { label: 'Marketing & Strategy', values: 'GTM Strategy, Employer Branding (EVP), Growth Experimentation, Lifecycle Marketing, Stakeholder Management' },
   { label: 'Tools', values: 'HubSpot, Tableau, Power BI, Google Analytics, Postman' },
 ]

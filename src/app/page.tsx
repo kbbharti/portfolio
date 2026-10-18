@@ -12,11 +12,11 @@ const aiProjects = [
   {
     title: 'RAG — Basic End-to-End',
     tagline: 'Retrieval-Augmented Generation · LangChain',
-    summary: 'A minimal, local-first RAG stack: parse PDFs → chunk → embed → answer with grounded citations. FastAPI + LangChain backend with Postgres-backed memory and a clean Next.js chat UI.',
+    summary: 'A Databricks-based RAG stack: parse PDFs → chunk → embed → retrieve through Databricks Vector Search → answer with grounded citations. FastAPI + LangChain backend with Postgres-backed memory and a clean Next.js chat UI.',
     bullets: [
-      'Ingestion pipeline parses PDFs, splits them into overlapping chunks, embeds each chunk with a local Ollama embedding model, and stores the vectors in Postgres / PostgreSQL via the pgvector extension for fast vector search',
+      'Ingestion pipeline parses PDFs, splits them into overlapping chunks, embeds each chunk through a Databricks-hosted embedding model, and stores the vectors in Databricks Vector Search for fast semantic retrieval',
       'FastAPI + LangChain conversational RAG (Retrieval-Augmented Generation) retrieves the most relevant chunks per question and grounds every answer with page-level source citations (PDF name + page number)',
-      'Runs fully local and private on Ollama (chat model + embeddings) against a single Postgres instance that holds both the vectors and the conversation memory',
+      'The LLM and embeddings are managed by Databricks Model Serving, while Postgres is kept for chat/session memory and application state',
       'Deployable end-to-end with Docker and Docker Compose for local dev, plus Kubernetes / GKE manifests (Deployment, Service, HPA) and a GitHub Actions CI/CD pipeline that builds images, pushes to Artifact Registry, and rolls out to the cluster',
     ],
     detailUrl: '/projects/rag-langchain',
@@ -25,10 +25,10 @@ const aiProjects = [
   {
     title: 'Agentic RAG — LangGraph ReAct Agent',
     tagline: 'Multi-tool reasoning · LangGraph',
-    summary: 'The advanced evolution of the basic RAG: a LangGraph ReAct agent that decides which tool to use per query — vector search, SQL, or custom Python functions — instead of always retrieving from one source.',
+    summary: 'The advanced evolution of the basic RAG: a LangGraph ReAct agent that decides which tool to use per query — Databricks Vector Search, SQL, or custom Python functions — instead of always retrieving from one source.',
     bullets: [
       'A LangGraph ReAct agent reasons over each user query in Python and autonomously selects the right tool, rather than always retrieving from a single vector store — the core upgrade over the basic RAG',
-      'Three tool types are wired in: semantic vector search over pgvector (PostgreSQL), a SQL toolkit over relational tables for exact counts and aggregations, and custom Python functions with descriptive docstrings',
+      'Three tool types are wired in: semantic vector search over Databricks Vector Search, a SQL toolkit over relational tables for exact counts and aggregations, and custom Python functions with descriptive docstrings',
       'Routing is driven by the tool descriptions — “how many / total / count” style questions go to SQL, conceptual questions to the vector database, and action-oriented requests to Python function tools',
       'Custom Python function tools can wrap backend API calls (FastAPI) or any external action, making the agent extensible to real business workflows well beyond document Q&A',
     ],
