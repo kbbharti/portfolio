@@ -1,11 +1,11 @@
 import Link from 'next/link'
 
-const stack = ['Python', 'LangGraph', 'ReAct Agent', 'LangChain', 'FastAPI', 'PostgreSQL', 'pgvector', 'SQL Toolkit', 'Ollama', 'Docker Compose']
+const stack = ['Python', 'LangGraph', 'ReAct Agent', 'LangChain', 'FastAPI', 'Databricks Vector Search', 'Databricks Model Serving', 'SQL Toolkit', 'PostgreSQL', 'Docker Compose']
 
 const tools = [
   {
     name: 'Vector Search',
-    detail: 'Semantic retrieval over embedded documents in Postgres (pgvector) — used when the query needs meaning-based lookup rather than exact figures.',
+    detail: 'Semantic retrieval over Databricks-managed document embeddings — used when the query needs meaning-based lookup rather than exact figures.',
   },
   {
     name: 'SQL Toolkit',
@@ -18,7 +18,7 @@ const tools = [
 ]
 
 const agentTools = [
-  { label: 'Vector Search · pgvector', hex: '#7c3aed', bg: 'bg-[#f5f0ff]', border: 'border-[#e6dbff]', text: 'text-[#7c3aed]' },
+  { label: 'Vector Search · Databricks', hex: '#7c3aed', bg: 'bg-[#f5f0ff]', border: 'border-[#e6dbff]', text: 'text-[#7c3aed]' },
   { label: 'SQL Toolkit · tables', hex: '#2563eb', bg: 'bg-[#eff4ff]', border: 'border-[#dbe4ff]', text: 'text-[#2563eb]' },
   { label: 'Python Functions · APIs', hex: '#059669', bg: 'bg-[#ecfdf5]', border: 'border-[#d1fae5]', text: 'text-[#059669]' },
 ]
@@ -47,7 +47,7 @@ export default function AgenticRagProject() {
 
       <div className="bg-[var(--bg2)] border border-[var(--border)] rounded-[10px] p-6 mb-6">
         <p className="text-[14px] text-[var(--text-soft)] leading-[1.75]">
-          The next step beyond the basic RAG. Instead of always retrieving from one vector store, a LangGraph ReAct agent reasons about each user query and decides which tool to call — vector search, SQL, or a custom Python function. It keeps the same backend foundation as the basic RAG, extended with relational tables and an agentic decision layer.
+          The next step beyond the basic RAG. Instead of always retrieving from one vector store, a LangGraph ReAct agent reasons about each user query and decides which tool to call — Databricks Vector Search, SQL, or a custom Python function. In this learning project, I used Databricks Free Edition so the LLM and embeddings are managed in Databricks rather than served from a local setup.
         </p>
       </div>
 
@@ -111,7 +111,7 @@ export default function AgenticRagProject() {
         <div className="bg-[var(--bg2)] border border-[var(--border)] rounded-[10px] p-6">
           <h3 className="text-[15px] font-medium text-[var(--accent2)] mb-3">Built on the RAG foundation</h3>
           <p className="text-[13px] text-[var(--text-soft)] leading-[1.7]">
-            Reuses the local-first backend from the basic RAG project — FastAPI, Postgres with pgvector, and local Ollama models — and adds SQL tables plus the LangGraph agent layer on top, keeping the same Docker Compose and deployment approach.
+            Reuses the same backend pattern as the basic RAG project — FastAPI, Postgres for chat memory, and a LangGraph agent layer — while shifting the LLM and vector retrieval to Databricks-managed services for a more cloud-native setup.
           </p>
         </div>
 

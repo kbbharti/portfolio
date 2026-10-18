@@ -1,12 +1,12 @@
 import Link from 'next/link'
 
-const stack = ['Python', 'LangChain', 'FastAPI', 'Next.js', 'PostgreSQL', 'pgvector', 'Ollama', 'Docker Compose', 'GKE', 'GitHub Actions']
+const stack = ['Python', 'LangChain', 'FastAPI', 'Next.js', 'Databricks Model Serving', 'Databricks Vector Search', 'PostgreSQL', 'Docker Compose', 'GKE', 'GitHub Actions']
 
 const pipeline = [
-  { step: 'Ingestion', detail: 'Parse PDFs → chunk → embed → store in Postgres via the pgvector extension.' },
-  { step: 'Backend', detail: 'FastAPI + LangChain conversational RAG with Postgres-backed chat memory (/chat, /health).' },
+  { step: 'Ingestion', detail: 'Parse PDFs → chunk → embed through a Databricks-hosted embedding model → index in Databricks Vector Search.' },
+  { step: 'Backend', detail: 'FastAPI + LangChain conversational RAG with Postgres-backed chat memory and Databricks vector retrieval (/chat, /health).' },
   { step: 'Frontend', detail: 'Clean Next.js, ChatGPT-style chat UI with streamed answers and cited sources.' },
-  { step: 'Deployment', detail: 'Docker Compose for local; GKE manifests (deployment, service, HPA) + GitHub Actions for cloud.' },
+  { step: 'Deployment', detail: 'Docker Compose for local dev; GKE manifests (deployment, service, HPA) + GitHub Actions for cloud.' },
 ]
 
 type Node = { label: string; accent?: boolean }
@@ -54,7 +54,7 @@ export default function RagLangChainProject() {
 
       <div className="bg-[var(--bg2)] border border-[var(--border)] rounded-[10px] p-6 mb-6">
         <p className="text-[14px] text-[var(--text-soft)] leading-[1.75]">
-          A minimal, local-first Retrieval-Augmented Generation stack. Everything runs against a local Ollama (LLM + embeddings) and a single Postgres instance holding both vectors and chat memory via the pgvector extension — so answers stay grounded in your own documents with page-level source citations.
+          A practical Retrieval-Augmented Generation project built with Databricks Free Edition. The LLM and embedding models are served through Databricks Model Serving, while the vector index lives in Databricks Vector Search — making the retrieval + generation stack cloud-managed instead of relying on a self-hosted model and vector database.
         </p>
       </div>
 
@@ -64,7 +64,7 @@ export default function RagLangChainProject() {
         <div className="space-y-5">
           <div>
             <div className="font-[family-name:var(--font-mono)] text-[10px] uppercase tracking-[0.1em] text-[var(--muted)] mb-2">Ingestion · offline</div>
-            <Flow nodes={[{ label: 'PDFs' }, { label: 'Chunk' }, { label: 'Embed · Ollama' }, { label: 'pgvector · Postgres', accent: true }]} />
+            <Flow nodes={[{ label: 'PDFs' }, { label: 'Chunk' }, { label: 'Embed · Databricks' }, { label: 'Vector Search', accent: true }]} />
           </div>
           <div>
             <div className="font-[family-name:var(--font-mono)] text-[10px] uppercase tracking-[0.1em] text-[var(--muted)] mb-2">Query · online</div>
@@ -73,13 +73,13 @@ export default function RagLangChainProject() {
                 { label: 'User' },
                 { label: 'FastAPI · LangChain', accent: true },
                 { label: 'Retrieve top-k' },
-                { label: 'Ollama LLM' },
+                { label: 'Databricks LLM' },
                 { label: 'Answer + citations' },
               ]}
             />
           </div>
           <p className="text-[12px] text-[var(--muted)] leading-[1.6]">
-            A single Postgres instance holds both the vector index (pgvector) and the conversation memory, so retrieval and chat history share one store.
+            Databricks manages the embedding model and vector index, while Postgres remains useful for chat/session memory and application state.
           </p>
         </div>
       </div>
@@ -119,14 +119,14 @@ export default function RagLangChainProject() {
           <h3 className="text-[15px] font-medium text-[var(--accent2)] mb-3">Repository layout</h3>
           <div className="space-y-2">
             {[
-              { path: 'configs/config.yaml', note: 'models, chunking, retriever, and system prompt' },
+              { path: 'configs/config.yaml', note: 'model names, chunking, retriever, and system prompt' },
               { path: 'common/', note: 'shared config + LangChain factories' },
-              { path: 'ingestion/', note: 'PDF → pgvector ingestion pipeline' },
+              { path: 'ingestion/', note: 'PDF → Databricks Vector Search ingestion pipeline' },
               { path: 'backend/', note: 'FastAPI app exposing /chat and /health' },
               { path: 'frontend/', note: 'Next.js chat UI' },
               { path: 'deploy/', note: 'GKE deployment / service / hpa for frontend + backend' },
               { path: '.github/workflows/', note: 'build + deploy to GKE' },
-              { path: 'docker-compose.yaml', note: 'postgres + backend + frontend' },
+              { path: 'docker-compose.yaml', note: 'local dev stack for backend + frontend' },
             ].map((row) => (
               <div key={row.path} className="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-3">
                 <code className="font-[family-name:var(--font-mono)] text-[11px] text-[var(--accent)] shrink-0 min-w-[180px]">{row.path}</code>

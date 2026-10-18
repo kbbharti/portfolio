@@ -22,7 +22,7 @@ const TOOL_STYLE: Record<Tool, { text: string; bg: string; border: string; dot: 
 };
 
 const TOOL_DESC: Record<Tool, string> = {
-  'Vector Search': 'semantic lookup over pgvector',
+  'Vector Search': 'semantic lookup over Databricks Vector Search',
   'SQL Toolkit': 'exact counts & aggregations',
   'Python Function': 'calls external backend APIs',
 };
@@ -46,7 +46,7 @@ const SCENARIOS: Scenario[] = [
     action: 'vector_search(\n  query="return policy damaged items",\n  k=3\n)',
     observation: '→ policy.pdf p.4  (score 0.90)\n  "Damaged items may be returned within\n   30 days for a full refund…"',
     answer:
-      'Damaged items can be returned within 30 days of delivery for a full refund or replacement, provided photos of the damage are submitted with the request. The agent chose vector search here because the answer is semantic and lives in the policy documents rather than a table.',
+      'Damaged items can be returned within 30 days of delivery for a full refund or replacement, provided photos of the damage are submitted with the request. The agent chose Databricks Vector Search here because the answer is semantic and lives in the policy documents rather than a table.',
   },
   {
     label: 'Check the live shipping status for order #4821',

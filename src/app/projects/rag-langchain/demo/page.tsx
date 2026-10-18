@@ -9,7 +9,7 @@ type Msg = { role: 'user' | 'assistant'; content: string; chunks?: Chunk[]; done
 const KB: Record<string, { answer: string; chunks: Chunk[] }> = {
   'what is rag': {
     answer:
-      'Retrieval-Augmented Generation (RAG) grounds a language model in your own documents instead of relying only on what it memorised during training. At query time the system retrieves the most relevant chunks from a vector store and passes them to the model as context, so answers stay accurate, up to date, and traceable back to a source. In this project, PDFs are chunked, embedded, and stored in Postgres via pgvector, and every answer cites the exact document and page it came from.',
+      'Retrieval-Augmented Generation (RAG) grounds a language model in your own documents instead of relying only on what it memorised during training. At query time the system retrieves the most relevant chunks from a Databricks-managed vector index and passes them to the model as context, so answers stay accurate, up to date, and traceable back to a source. In this project, PDFs are chunked, embedded with a Databricks-hosted embedding model, and stored in Databricks Vector Search, with every answer citing the exact document and page it came from.',
     chunks: [
       { doc: '2312.10997v5.pdf', page: 'p.1', score: 0.91, snippet: 'RAG combines a retriever over an external corpus with a generator, grounding responses in retrieved evidence…' },
       { doc: '2312.10997v5.pdf', page: 'p.3', score: 0.86, snippet: 'At inference the query is embedded, the nearest chunks are fetched, and passed as context to the LLM…' },
@@ -25,10 +25,10 @@ const KB: Record<string, { answer: string; chunks: Chunk[] }> = {
   },
   embeddings: {
     answer:
-      'Each chunk is turned into a dense vector using a local embedding model served by Ollama (nomic-embed-text, 768 dimensions). Those vectors are stored in Postgres through the pgvector extension, which lets the backend run fast similarity search to find the chunks closest in meaning to the user question — all without any external API call.',
+      'Each chunk is turned into a dense vector using an embedding model served through Databricks. Those vectors are indexed in Databricks Vector Search, which lets the backend run fast similarity search to find the chunks closest in meaning to the user question — without needing a self-hosted model-serving and vector store setup.',
     chunks: [
-      { doc: 'ingestion-guide.pdf', page: 'p.1', score: 0.9, snippet: 'nomic-embed-text produces 768-dim vectors stored in a pgvector column with an ivfflat index…' },
-      { doc: 'architecture.pdf', page: 'p.2', score: 0.83, snippet: 'Similarity search runs in Postgres via the <=> cosine-distance operator, no external service…' },
+      { doc: 'ingestion-guide.pdf', page: 'p.1', score: 0.9, snippet: 'The Databricks embedding model produces dense vectors that are indexed in Databricks Vector Search for fast semantic retrieval…' },
+      { doc: 'architecture.pdf', page: 'p.2', score: 0.83, snippet: 'Similarity search runs against the Databricks vector index, so the backend can fetch nearest chunks without a self-hosted vector database…' },
     ],
   },
   memory: {
@@ -60,8 +60,8 @@ const SUGGESTIONS = [
 ];
 
 const META = [
-  { label: 'qwen2.5:7b', hint: 'chat model' },
-  { label: 'nomic-embed-text', hint: 'embeddings' },
+  { label: 'Databricks LLM', hint: 'chat model' },
+  { label: 'Databricks embeddings', hint: 'vector index' },
   { label: '5 docs · 128 chunks', hint: 'corpus' },
 ];
 
@@ -69,7 +69,7 @@ function matchKb(q: string) {
   const t = q.toLowerCase();
   if (/(what|explain|about).*rag|^rag|retrieval/.test(t)) return KB['what is rag'];
   if (/chunk|split|overlap/.test(t)) return KB['chunking'];
-  if (/embed|vector|pgvector|similarity/.test(t)) return KB['embeddings'];
+  if (/embed|vector|similarity/.test(t)) return KB['embeddings'];
   if (/memory|history|session|follow/.test(t)) return KB['memory'];
   if (/deploy|docker|kubernetes|gke|ci|cd|compose/.test(t)) return KB['deploy'];
   return null;
@@ -187,7 +187,7 @@ export default function RagDemoPage() {
           </div>
           <h1 className="text-[27px] font-[family-name:var(--font-display)] text-[var(--text)] mb-2">Ask the documents</h1>
           <p className="text-[13px] text-[var(--muted)] leading-[1.7] max-w-[600px]">
-            A ChatGPT-style RAG chat. Each question runs a similarity search over Postgres (pgvector), the retrieved chunks are shown, then a grounded answer streams in with the exact document and page it came from. Out-of-corpus questions are declined instead of hallucinated.
+            A ChatGPT-style RAG chat. Each question runs a similarity search over Databricks Vector Search, the retrieved chunks are shown, then a grounded answer streams in with the exact document and page it came from. Out-of-corpus questions are declined instead of hallucinated.
           </p>
           <div className="flex flex-wrap gap-1.5 mt-4">
             {META.map((m) => (
@@ -298,7 +298,7 @@ export default function RagDemoPage() {
                         <span className="w-1.5 h-1.5 rounded-full bg-[#4f46e5] animate-bounce [animation-delay:-0.1s]" />
                         <span className="w-1.5 h-1.5 rounded-full bg-[#4f46e5] animate-bounce" />
                       </span>
-                      Searching pgvector — top-k similarity
+                      Searching Databricks Vector Search — top-k similarity
                     </div>
                     {pendingChunks ? (
                       <div className="space-y-1.5">
